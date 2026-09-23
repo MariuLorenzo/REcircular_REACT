@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ===== PALETA ECOLÓGICA  ===== */
+
+  /* Verde bosque — color principal */
+  --primary: #4ea973;
+  --primary-hover: #c2b500de;
+  --primary-tint: rgba(74, 124, 94, 0.15);
+
+  /* Terracota / Rojizo — acento */
+  --accent-pink: #b8532a;
+  --pink-hover: #9e4422;
+  --pink-tint: rgba(184, 83, 42, 0.12);
+
+  /* Camel / Dorado oscuro — secundario */
+  --secondary: #8b6914;
+  --secondary-hover: #7a5c12;
+  --secondary-tint: rgba(139, 105, 20, 0.12);
+
+  /* Oliva / Verde musgo — acento complementario */
+  --accent-lime: #6b8c4a;
+
+  /* Fondos cálidos — pergamino y crema */
+  --bg: #f4dfbd;
+  --surface: #fffdf7;
+  --card: #f7fffa;
+
+  /* Bordes cálidos — taupe y siena claro */
+  --border: #d4bfa0;
+  --border-pink: #e0c5a8;
+
+  /* Tipografía */
+  --text: #2a1a0e;
+  --text-secondary: #5c3d2a;
+
+  /* Estados */
+  --disabled: #c4a882;
+  --danger: #b8532a;
+  --success: #4a7c5e;
+
+  /* Fonts */
+  --font-title: 'Berkshire Swash', cursive, serif;
+  --font-body: 'Roboto Slab', serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  /* Fondo tapiz oficial app */
+  background-color: var(--bg);
+  background-image: url('/img/fondoapp.png');
+  background-repeat: repeat;
+  background-size: 380px auto;
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1, h2, h3, .brandTitle {
+  font-family: var(--font-title);
+  color: var(--text);
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.3rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.6rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.pink {
+  color: var(--accent-pink);
+}
+
+.secondary {
+  color: var(--text-secondary);
+}
+
+.disabled {
+  color: var(--disabled);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+  color: #000503;
+}
+
+.bg-pink {
+  background-color: var(--accent-pink);
+  color: #ffffff;
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
+.bg-success {
+  background-color: var(--primary);
+  color: #000503;
+}
+
+.bg-delete {
+  background-color: var(--danger);
+  color: #ffffff;
+}
+
+.btn {
+  border: none;
+  border-radius: 9999px;
+  padding: 0.65rem 1.4rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 5, 3, 0.08);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 5, 3, 0.15);
+}
+
+.bg-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.bg-pink:hover {
+  background-color: var(--pink-hover);
+}
+
+.bg-secondary:hover {
+  background-color: var(--secondary-hover);
+}
+
+.bg-delete:hover {
+  filter: brightness(0.9);
+}
+
+.btn:disabled {
+  background-color: var(--disabled) !important;
+  color: #ffffff !important;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* =========================================================================
+   BREAKPOINTS ADAPTATIVOS (< 400px, 900px, 1200px)
+   ========================================================================= */
+
+@media (max-width: 400px) {
+  body {
+    background-size: 260px auto;
+  }
+  h1 {
+    font-size: 1.65rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 1.35rem;
+    line-height: 1.25;
+  }
+  h3 {
+    font-size: 1.15rem;
+  }
+  .btn {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 900px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2.1rem;
+  }
+}

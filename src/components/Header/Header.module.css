@@ -1,0 +1,221 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background-color: var(--primary);
+  border-bottom: 3px solid #14be7d;
+  box-shadow: 0 4px 18px rgba(0, 5, 3, 0.1);
+}
+
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.logoLink:hover {
+  transform: scale(1.02);
+}
+
+.logoImg {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Botón Hamburguesa */
+.hamburgerBtn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.35rem;
+  color: var(--text);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+/* Navegación Desktop & Tablet */
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.navLink {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  background-color: transparent;
+}
+
+.navLink:hover {
+  background-color: rgba(0, 5, 3, 0.08);
+}
+
+.active {
+  background-color: var(--text);
+  color: var(--primary);
+}
+
+.cartWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.cartLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* =========================================================================
+   DRAWER DESPLEGABLE MOBILE (Rosa sólido #e81c6a con acento menta)
+   ========================================================================= */
+
+.mobileDrawer {
+  position: fixed;
+  top: 0;
+  left: -290px;
+  width: 270px;
+  max-width: 82vw;
+  height: 100vh;
+  background-color: var(--accent-pink);
+  color: #ffffff;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.35);
+  padding: 1.25rem;
+}
+
+.drawerOpen {
+  left: 0;
+}
+
+.drawerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1.25rem;
+}
+
+.drawerLogoImg {
+  height: 42px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.closeDrawerBtn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+}
+
+.drawerNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+}
+
+.drawerLink {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: background 0.2s;
+  display: block;
+}
+
+.drawerLink:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.drawerActive {
+  background-color: #ffffff;
+  color: var(--accent-pink);
+  font-weight: 800;
+}
+
+.drawerFooter {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 5, 3, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 250;
+}
+
+/* =========================================================================
+   OPTIMIZACIÓN RESPONSIVE (< 400px, 900px, 1200px)
+   ========================================================================= */
+
+@media (max-width: 400px) {
+  .header {
+    padding: 0.35rem 0;
+  }
+  .container {
+    width: 94%;
+    gap: 0.4rem;
+  }
+  .hamburgerBtn {
+    display: block;
+  }
+  .desktopNav {
+    display: none;
+  }
+  .logoImg {
+    height: 40px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 900px) {
+  .logoImg {
+    height: 48px;
+  }
+  .desktopNav {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logoImg {
+    height: 56px;
+  }
+  .desktopNav {
+    gap: 1.8rem;
+  }
+}

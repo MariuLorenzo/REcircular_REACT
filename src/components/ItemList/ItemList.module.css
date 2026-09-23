@@ -1,0 +1,54 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  background: var(--surface);
+  border-radius: 16px;
+  border: 2px dashed var(--border);
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+/* =========================================================================
+   BREAKPOINTS ADAPTATIVOS PARA LA GRILLA DE PRODUCTOS:
+   - <= 400px: 1 columna (celulares pequeños)
+   - 401px - 900px: 2 columnas (tablets y móviles estándar)
+   - 901px - 1199px: 3 columnas
+   - >= 1200px: 4 columnas (maquetación editorial en escritorio)
+   ========================================================================= */
+
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1199px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}

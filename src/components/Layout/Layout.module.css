@@ -1,0 +1,36 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+.main {
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3.5rem;
+}
+
+/* 400px breakpoint: compact padding for small phones */
+@media (max-width: 400px) {
+  .main {
+    padding: 1rem 0.75rem 2.5rem;
+  }
+}
+
+/* 900px breakpoint: tablet width */
+@media (min-width: 401px) and (max-width: 900px) {
+  .main {
+    width: min(880px, 94%);
+    padding: 1.5rem 1rem 3rem;
+  }
+}
+
+/* 1200px breakpoint: editorial desktop width */
+@media (min-width: 1200px) {
+  .main {
+    width: min(1200px, 90%);
+    padding: 2.5rem 0 4rem;
+  }
+}
