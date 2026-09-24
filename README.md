@@ -6,7 +6,7 @@ Proyecto Final de E-Commerce desarrollado en **React** y **Vite**, estructurado 
 
 ## 🎯 Objetivo y Temática
 REcircular es una tienda online de ropa usada y tesoros textiles vintage 
-(estilo "feria americana"), donde cada prenda cuenta una historia y tiene un stock limitado. Fomenta el consumo circular, la moda sustentable y la resignificación de piezas de los años 70s, 80s, 90s y 2000s.
+(estilo "feria americana"), donde cada prenda cuenta una historia y tiene un stock limitado. Fomenta el consumo de "circular", de moda sustentable y la resignificación de piezas de los años 70s, 80s, 90s y 2000s.
 
 ---
 
@@ -64,8 +64,6 @@ REcircular es una tienda online de ropa usada y tesoros textiles vintage
 │   ├── App.jsx                     <-- Configuración de rutas (Routes / Route)
 │   ├── index.css                   <-- Reseteo y variables de diseño globales
 │   └── main.jsx                    <-- Entrada principal (BrowserRouter + CartProvider)
-├── context.md                      <-- Resumen de contexto para bajo consumo de tokens
-├── progreso.md                     <-- Registro de hitos cumplidos
 ├── package.json
 └── vite.config.js
 ```
