@@ -95,6 +95,6 @@ REcircular es una tienda online de ropa usada y tesoros textiles vintage
 ---
 
 ## 🌐 Despliegue en la Nube
-El proyecto está preparado para desplegarse fácilmente en **Vercel** o **Netlify**:
+El proyecto está preparado para desplegarse fácilmente en **Vercel** 
 - Comando de compilación: `npm run build`
 - Directorio de salida: `dist`
