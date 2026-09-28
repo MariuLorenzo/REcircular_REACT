@@ -7,27 +7,23 @@ Proyecto Final de E-Commerce desarrollado en **React** y **Vite**, estructurado 
 Este proyecto está desarrollado en Septiembre de 2026 para Talento Tech en República Argentina 🇦🇷 :argentina: 😉 
 
 ---
-#
+
 ## 🎯 Objetivo y Temática
 REcircular es una tienda online de ropa usada y tesoros textiles vintage 
 (estilo "feria americana"), donde cada prenda cuenta una historia y tiene un stock limitado. Fomenta el consumo de "circular", de moda sustentable y la resignificación de piezas de los años 70s, 80s, 90s y 2000s.
 
 ---
-# **«AIE Creations by Mariu»**  ✨
----
 #
-## 
-#
+## **«AIE Creations by Mariu»**  ✨
+
 Soy «Mariü» y mi proyecto de desarrollo consciente se llama «AIE Creations».<br>
 Combino la lógica del software, el diseño UX/UI y una sólida formación en humanidades para crear soluciones tecnológicas con propósito. En mi vida profesional hice un recorrido interdisciplinario que incluye docencia, coaching, terapia, comunicación, marketing, producción y artes visuales. Desde esa mirada holística, entiendo que el código informático y los mapas mentales comparten una misma esencia: estructuran la forma en que interactuamos con el mundo. <br>
 Hoy transformo esa versatilidad en productos digitales funcionales, humanos y sostenibles, aportando una perspectiva empática, curiosa y orientada a resolver problemas reales. 
 
 #
 ## **Autora** ✒️
-#
-* **Mariela Lorenzo**
 
-[MariuLorenzo](https://github.com/MariuLorenzo)
+* **Mariela Lorenzo** = [MariuLorenzo](https://github.com/MariuLorenzo)
 
 <img src="https://avatars.githubusercontent.com/u/114081375?v=4" width=115><br><sub> Mariü Lorenzo </sub>
 
@@ -50,21 +46,11 @@ https://recircular-react.vercel.app/
 ## Versiones - Repositorio 📌
 #
 
-https://github.com/MariuLorenzo/REcircular_REACT
-
-#
-## Revisión del Proyecto 📁
-#
-
 [![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)](#)
 
+https://github.com/MariuLorenzo/REcircular_REACT
+
 ---
-
-#
-## Instalación 🔧
-#
-
-El formato de la página es _responsive_ 🖥️💻📱
 
 #
 ## Ejecutando las pruebas ⚙️
@@ -149,6 +135,10 @@ El formato de la página es _responsive_ 🖥️💻📱
 ```
 
 ---
+#
+# Instalación 🔧
+
+El formato de la página es _responsive_ 🖥️💻📱
 
 ## 💻 Instrucciones para Ejecutar en Local
 
@@ -186,9 +176,7 @@ El proyecto está desplegado en **Vercel**
 #
 ®️ Este proyecto está bajo mi Licencia ©️ 
 
-#
-😊 holis ! 
-
+😊 holis !  
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
 
 Contacta con la autora para detalles:
@@ -201,22 +189,18 @@ https://www.linkedin.com/in/mariu-lorenzo/
 
 #
 ## Expresiones de Gratitud 🎁
-#
-* Comenta a otros sobre este proyecto 📢
-* Da las gracias públicamente 🤓!!
+
+* Expande buenas vibras 📢💫
+* Da las gracias a diario 🤓💬!!
 
 [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/kennethreitz)
 
-* Si ya sos programador@ o sos "senior", pasa a dejar tu apoyo a gente como yo, o sea, a los nuev@s en la matrix 💫💬
-
-#
----
-* Haz comunidad y envía buenas vibras 🥰
+* Haz comunidad 🥰
 * Construye un futuro próspero y empático para el mundo ❤️🌎
 
 ---
  
-«»
+«Ahora sé más de lo que sabía...el tiempo fluye como líquido entre mis manos.»
 
 ---
 

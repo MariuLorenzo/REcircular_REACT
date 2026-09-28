@@ -123,7 +123,7 @@ export const HomePage = () => {
       {/* Beneficios Adaptativos */}
       <section style={{ marginBottom: '2rem' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-          ¿Por qué elegir feria en Recircular?
+          ¿Por qué elegir feria Recircular?
         </h2>
         <div
           style={{
