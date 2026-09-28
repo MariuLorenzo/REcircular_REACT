@@ -7,21 +7,21 @@ export const Footer = () => {
       nombre: 'Mariu',
       rol: 'Curadora Vintage',
       bio: 'Especialista en moda de todos los tiempos. Recorre ferias y baúles rescatando joyas textiles únicas.',
-      avatar: 'public\\img\\eternal sunshine of spotless mind A.jpg',
+      avatar: '/img/eternal sunshine of spotless mind A.jpg',
     },
     {
       id: 2,
       nombre: 'Mari-e',
       rol: 'Fundadora & Logística',
       bio: 'Impulsora de la moda circular y sustentable. Gestiona nuestras entregas con packaging biodegradable.',
-      avatar: 'public\\img\\pirata_m.jpg',
+      avatar: '/img/pirata_m.jpg',
     },
     {
       id: 3,
       nombre: 'Maro',
       rol: 'Restauradora Textil',
       bio: 'Artesana de la costura. Encargada del acondicionamiento, restauración y cuidado de todas las prendas.',
-      avatar: 'public\\img\\Snapchat-485623790.jpg',
+      avatar: '/img/Snapchat-485623790.jpg',
     },
   ];
 

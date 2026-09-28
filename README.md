@@ -29,14 +29,13 @@ Hoy transformo esa versatilidad en productos digitales funcionales, humanos y so
 
 #
 ## Desarrollo del Proyecto 💡
-#
+
 * [MariuLorenzo](https://github.com/MariuLorenzo)
 
 * [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](#)
 
 #
 ## Despliegue 📦
-#
 
 https://recircular-react.vercel.app/
 
@@ -44,11 +43,10 @@ https://recircular-react.vercel.app/
 
 #
 ## Versiones - Repositorio 📌
-#
-
-[![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)](#)
 
 https://github.com/MariuLorenzo/REcircular_REACT
+
+[![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)](#)
 
 ---
 
@@ -65,15 +63,14 @@ https://github.com/MariuLorenzo/REcircular_REACT
 * [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#)
 * ![CSS](https://img.shields.io/badge/CSS-563d7c?&style=flat&logo=css3&logoColor=white)
 * [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#)
-* [![React](https://shields.io)](https://reactjs.org)
-* [![Vite](https://shields.io)](https://vitejs.dev)
+* ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+* ![Vite](https://img.shields.io/badge/-Vite-B73BFE?style=flat&logo=vite&logoColor=white)
 * [![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=visualstudiocode&logoColor=white)](#)
 * [![Figma](https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white)](#)
 * [![Canva](https://custom-icon-badges.demolab.com/badge/Canva-%2300C4CC.svg?&logo=canva&logoColor=white)](#)
-* [![Google Gemini](https://img.shields.io/badge/Google%20Gemini-886FBF?logo=googlegemini&logoColor=fff)](#)
 * [![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?logo=GoogleChrome&logoColor=white)](#)
-* [![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?logo=vercel&logoColor=white)](#)
 * [![Git](https://img.shields.io/badge/github-repo-blue?logo=github)](#)
+* [![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?logo=vercel&logoColor=white)](#)
 
 #
 ## 🚀 Requisitos y Características Implementadas

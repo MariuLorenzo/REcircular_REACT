@@ -135,8 +135,8 @@
   color: var(--text-secondary);
 }
 
-/* < 400px: Pantallas pequeñas de móvil */
-@media (max-width: 400px) {
+/* Móviles: 1 columna hasta 768px */
+@media (max-width: 768px) {
   .footer {
     padding: 2rem 0 1.25rem;
   }
@@ -164,8 +164,8 @@
   }
 }
 
-/* 401px - 900px: 2 columnas en tablets */
-@media (min-width: 401px) and (max-width: 900px) {
+/* 769px - 1199px: 2 columnas en tablets */
+@media (min-width: 769px) and (max-width: 1199px) {
   .staffGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
