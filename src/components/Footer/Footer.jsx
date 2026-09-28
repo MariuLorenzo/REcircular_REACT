@@ -18,7 +18,7 @@ export const Footer = () => {
     },
     {
       id: 3,
-      nombre: 'Maro',
+      nombre: 'Maró',
       rol: 'Restauradora Textil',
       bio: 'Artesana de la costura. Encargada del acondicionamiento, restauración y cuidado de todas las prendas.',
       avatar: '/img/Snapchat-485623790.jpg',

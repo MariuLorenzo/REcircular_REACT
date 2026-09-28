@@ -25,6 +25,10 @@ export const HomePage = () => {
       <section
         style={{
           backgroundColor: '#fff5e0',
+          backgroundImage: "url('/img/fondoapp.png')",
+          backgroundSize: '380px auto',
+          backgroundRepeat: 'repeat',
+          backgroundBlendMode: 'overlay',
           borderRadius: '24px',
           border: '3px solid var(--primary)',
           padding: 'clamp(1.5rem, 5vw, 3.5rem) clamp(1rem, 4vw, 2.5rem)',
