@@ -1,15 +1,95 @@
-# 🧥 REcircular — E-Commerce SPA (Feria Americana Vintage)
-
-Proyecto Final de E-Commerce desarrollado en **React** y **Vite**, estructurado como una **Single Page Application (SPA)** de alto rendimiento, modular y accesible.
 
 ---
 
+# 🧥 REcircular — E-Commerce SPA (Feria Americana Vintage)
+
+Proyecto Final de E-Commerce desarrollado en **React** y **Vite**, estructurado como una **Single Page Application (SPA)** de alto rendimiento, modular y accesible.
+Este proyecto está desarrollado en Septiembre de 2026 para Talento Tech en República Argentina 🇦🇷 :argentina: 😉 
+
+---
+#
 ## 🎯 Objetivo y Temática
 REcircular es una tienda online de ropa usada y tesoros textiles vintage 
 (estilo "feria americana"), donde cada prenda cuenta una historia y tiene un stock limitado. Fomenta el consumo de "circular", de moda sustentable y la resignificación de piezas de los años 70s, 80s, 90s y 2000s.
 
 ---
+# **«AIE Creations by Mariu»**  ✨
+---
+#
+## 
+#
+Soy «Mariü» y mi proyecto de desarrollo consciente se llama «AIE Creations».<br>
+Combino la lógica del software, el diseño UX/UI y una sólida formación en humanidades para crear soluciones tecnológicas con propósito. En mi vida profesional hice un recorrido interdisciplinario que incluye docencia, coaching, terapia, comunicación, marketing, producción y artes visuales. Desde esa mirada holística, entiendo que el código informático y los mapas mentales comparten una misma esencia: estructuran la forma en que interactuamos con el mundo. <br>
+Hoy transformo esa versatilidad en productos digitales funcionales, humanos y sostenibles, aportando una perspectiva empática, curiosa y orientada a resolver problemas reales. 
 
+#
+## **Autora** ✒️
+#
+* **Mariela Lorenzo**
+
+[MariuLorenzo](https://github.com/MariuLorenzo)
+
+<img src="https://avatars.githubusercontent.com/u/114081375?v=4" width=115><br><sub> Mariü Lorenzo </sub>
+
+#
+## Desarrollo del Proyecto 💡
+#
+* [MariuLorenzo](https://github.com/MariuLorenzo)
+
+* [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](#)
+
+#
+## Despliegue 📦
+#
+
+https://recircular-react.vercel.app/
+
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/)
+
+#
+## Versiones - Repositorio 📌
+#
+
+https://github.com/MariuLorenzo/REcircular_REACT
+
+#
+## Revisión del Proyecto 📁
+#
+
+[![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)](#)
+
+---
+
+#
+## Instalación 🔧
+#
+
+El formato de la página es _responsive_ 🖥️💻📱
+
+#
+## Ejecutando las pruebas ⚙️
+#
+
+![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green)
+
+#
+## Construido con 🛠️
+#
+
+* [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#)
+* ![CSS](https://img.shields.io/badge/CSS-563d7c?&style=flat&logo=css3&logoColor=white)
+* [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#)
+* [![React](https://shields.io)](https://reactjs.org)
+* [![Vite](https://shields.io)](https://vitejs.dev)
+* [![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=visualstudiocode&logoColor=white)](#)
+* [![Figma](https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white)](#)
+* [![Canva](https://custom-icon-badges.demolab.com/badge/Canva-%2300C4CC.svg?&logo=canva&logoColor=white)](#)
+* [![Google Gemini](https://img.shields.io/badge/Google%20Gemini-886FBF?logo=googlegemini&logoColor=fff)](#)
+* [![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?logo=GoogleChrome&logoColor=white)](#)
+* [![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?logo=vercel&logoColor=white)](#)
+* [![Git](https://img.shields.io/badge/github-repo-blue?logo=github)](#)
+
+#
 ## 🚀 Requisitos y Características Implementadas
 
 ### 1. Requisitos Funcionales (RF)
@@ -95,6 +175,66 @@ REcircular es una tienda online de ropa usada y tesoros textiles vintage
 ---
 
 ## 🌐 Despliegue en la Nube
-El proyecto está preparado para desplegarse fácilmente en **Vercel** 
+El proyecto está desplegado en **Vercel** 
 - Comando de compilación: `npm run build`
 - Directorio de salida: `dist`
+
+---
+
+#
+## Licencia 📄
+#
+®️ Este proyecto está bajo mi Licencia ©️ 
+
+#
+😊 holis ! 
+
+[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
+
+Contacta con la autora para detalles:
+
+* [![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff)](#)
+https://www.linkedin.com/in/mariu-lorenzo/ 
+
+* [![Gmail](https://img.shields.io/badge/Gmail-D14836?logo=gmail&logoColor=white)](#)
+📧​ Mail: mariulorenzo@gmail.com
+
+#
+## Expresiones de Gratitud 🎁
+#
+* Comenta a otros sobre este proyecto 📢
+* Da las gracias públicamente 🤓!!
+
+[![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/kennethreitz)
+
+* Si ya sos programador@ o sos "senior", pasa a dejar tu apoyo a gente como yo, o sea, a los nuev@s en la matrix 💫💬
+
+#
+---
+* Haz comunidad y envía buenas vibras 🥰
+* Construye un futuro próspero y empático para el mundo ❤️🌎
+
+---
+ 
+«»
+
+---
+
+## Hi there👋
+🔭 I'm currently working on becoming the best version of myself.
+
+🌱 I'm currently learning software development.
+
+👯 I'm looking to collaborate on interesting projects.
+
+🤔 I'm looking for help with "fixing the world."
+
+💬 Ask me about...anything (?)
+
+📫 How to contact me: mariulorenzo@gmail.com
+
+😄 Pronouns: She.
+
+⚡ Fun fact: My favorite place is water. I love to swim.
+
+<!--**MariuLorenzo/MariuLorenzo** is a ✨ _special_ ✨ repository because you can read it in its READ-ME-->
