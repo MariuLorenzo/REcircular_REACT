@@ -1,0 +1,62 @@
+/* Estilos del OrderSuccess: ticket de compra exitosa */
+
+.successContainer {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0;
+  width: 100%;
+}
+
+.successCard {
+  background-color: #ffffff;
+  border: 3px solid var(--primary);
+  border-radius: 22px;
+  padding: 2.5rem 2rem;
+  max-width: 550px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 12px 35px rgba(28, 232, 154, 0.25);
+}
+
+.successIcon {
+  font-size: 3.5rem;
+}
+
+.successText {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.orderBadge {
+  background-color: var(--primary-tint);
+  border: 2px dashed var(--primary);
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.summaryBox {
+  background-color: #f7fdfa;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+@media (max-width: 400px) {
+  .successCard {
+    padding: 1.5rem 1rem;
+  }
+}
