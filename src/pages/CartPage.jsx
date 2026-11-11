@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { useCart } from '../context/CartContext';
 import { CartEmpty } from '../components/Cart/CartEmpty';
 import { CartItem } from '../components/Cart/CartItem';
@@ -15,6 +16,11 @@ export const CartPage = () => {
 
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>Mi Carrito — REcircular</title>
+        <meta name="description" content="Revisa las prendas vintage seleccionadas en tu carrito antes de finalizar la compra." />
+      </Helmet>
+
       <div className={styles.headerRow}>
         <h1>Mi Carrito ({cantidadTotal} {cantidadTotal === 1 ? 'prenda' : 'prendas'})</h1>
         <button

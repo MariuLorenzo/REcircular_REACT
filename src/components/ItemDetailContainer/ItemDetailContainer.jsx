@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
+import { getProductById } from '../../services/productService';
 
 export const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -12,28 +13,58 @@ export const ItemDetailContainer = () => {
     setCargando(true);
     setNoEncontrado(false);
 
-    fetch('/productos.json')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Error de conexión con el catálogo');
-        }
-        return response.json();
-      })
-      .then((productos) => {
-        const itemEncontrado = productos.find((p) => String(p.id) === String(id));
-        if (itemEncontrado) {
-          setProducto(itemEncontrado);
+    let cancelado = false;
+
+    // Intentamos buscar primero en Firestore por su ID de documento
+    getProductById(id)
+      .then((itemFirestore) => {
+        if (cancelado) return;
+        if (itemFirestore) {
+          setProducto(itemFirestore);
+          setCargando(false);
         } else {
-          setNoEncontrado(true);
+          // Si no existe en Firestore, buscamos en productos.json como respaldo
+          return fetch('/productos.json')
+            .then((res) => (res.ok ? res.json() : []))
+            .then((listaEstática) => {
+              if (cancelado) return;
+              const encontrado = listaEstática.find(
+                (p) => String(p.id) === String(id)
+              );
+              if (encontrado) {
+                setProducto(encontrado);
+              } else {
+                setNoEncontrado(true);
+              }
+              setCargando(false);
+            });
         }
-        setCargando(false);
       })
       .catch((err) => {
-        console.error('Error al obtener el producto:', err);
-        setNoEncontrado(true);
-        setCargando(false);
+        if (cancelado) return;
+        console.error('Error al consultar Firestore en ItemDetailContainer:', err);
+        // Respaldo en caso de error
+        fetch('/productos.json')
+          .then((res) => (res.ok ? res.json() : []))
+          .then((lista) => {
+            const encontrado = lista.find((p) => String(p.id) === String(id));
+            if (encontrado) {
+              setProducto(encontrado);
+            } else {
+              setNoEncontrado(true);
+            }
+            setCargando(false);
+          })
+          .catch(() => {
+            setNoEncontrado(true);
+            setCargando(false);
+          });
       });
-  }, [id]); // Array de dependencias [id] 
+
+    return () => {
+      cancelado = true;
+    };
+  }, [id]);
 
   if (cargando) {
     return (

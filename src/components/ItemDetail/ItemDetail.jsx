@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { useCart } from '../../context/CartContext';
 import styles from './ItemDetail.module.css';
 
@@ -37,6 +38,14 @@ export const ItemDetail = ({ producto }) => {
 
   return (
     <div className={styles.wrapper}>
+      <Helmet>
+        <title>{`${nombre} — REcircular Vintage`}</title>
+        <meta
+          name="description"
+          content={descripcion ? descripcion.slice(0, 155) : 'Prenda vintage exclusiva en REcircular.'}
+        />
+      </Helmet>
+
       <div className={styles.container}>
         {/* Columna Izquierda: Imagen de la prenda */}
         <div className={styles.imageCol}>

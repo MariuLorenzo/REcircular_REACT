@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { useAuth } from '../context/AuthContext';
 import styles from './LoginPage.module.css';
 
@@ -31,6 +32,11 @@ export const LoginPage = () => {
 
   return (
     <div className={styles.pageWrapper}>
+      <Helmet>
+        <title>Ingreso Administrador — REcircular</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+
       <div className={styles.card}>
         {/* Logo */}
         <div className={styles.logoArea}>

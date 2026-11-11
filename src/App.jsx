@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import { Layout } from './components/Layout/Layout';
+import { Layout as PublicLayout } from './components/Layout/Layout';
+import { AdminLayout } from './components/Admin/AdminLayout';
 import { HomePage } from './pages/HomePage';
 import { CartPage } from './pages/CartPage';
 import { CheckoutPage } from './pages/CheckoutPage';
@@ -12,8 +13,8 @@ import { ProtectedRoute } from './routes/ProtectedRoute';
 function App() {
   return (
     <Routes>
-      {/* Rutas públicas — con Header, Footer y nav */}
-      <Route path="/" element={<Layout />}>
+      {/* Rutas públicas — PublicLayout con Header, Footer y nav */}
+      <Route path="/" element={<PublicLayout />}>
         <Route index element={<HomePage />} />
         <Route path="productos" element={<ItemListContainer />} />
         <Route path="producto/:id" element={<ItemDetailContainer />} />
@@ -21,12 +22,14 @@ function App() {
         <Route path="checkout" element={<CheckoutPage />} />
       </Route>
 
-      {/* Login — sin Layout público */}
+      {/* Login — independiente */}
       <Route path="/login" element={<LoginPage />} />
 
-      {/* Rutas privadas — solo accesibles con sesión activa */}
+      {/* Rutas privadas — AdminLayout protegido con autenticación de Firebase */}
       <Route element={<ProtectedRoute />}>
-        <Route path="/admin" element={<AdminPage />} />
+        <Route element={<AdminLayout />}>
+          <Route path="/admin" element={<AdminPage />} />
+        </Route>
       </Route>
     </Routes>
   );

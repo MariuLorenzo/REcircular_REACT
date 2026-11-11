@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 import { CartWidget } from '../CartWidget/CartWidget';
 import styles from './Header.module.css';
 
 export const Header = () => {
   const [menuAbierto, setMenuAbierto] = useState(false);
   const location = useLocation();
+  const { currentUser } = useAuth();
 
   const toggleMenu = () => setMenuAbierto((prev) => !prev);
   const cerrarMenu = () => setMenuAbierto(false);
@@ -48,6 +50,13 @@ export const Header = () => {
             className={`${styles.navLink} ${isActive('/productos') ? styles.active : ''}`}
           >
             Catálogo
+          </Link>
+          <Link
+            to="/admin"
+            className={`${styles.navLink} ${isActive('/admin') ? styles.active : ''}`}
+            title="Panel de Administración"
+          >
+            {currentUser ? '⚙️ Admin' : '🔐 Ingresar'}
           </Link>
         </nav>
 
@@ -105,6 +114,13 @@ export const Header = () => {
             onClick={cerrarMenu}
           >
             🛍️ Mi Carrito
+          </Link>
+          <Link
+            to="/admin"
+            className={`${styles.drawerLink} ${isActive('/admin') ? styles.drawerActive : ''}`}
+            onClick={cerrarMenu}
+          >
+            {currentUser ? '⚙️ Panel Admin' : '🔐 Ingreso Admin'}
           </Link>
         </nav>
         <div className={styles.drawerFooter}>

@@ -4,7 +4,7 @@ import styles from './CheckoutForm.module.css';
 
 export const CheckoutForm = () => {
   const { getCartTotal } = useCart();
-  const { formData, handleInputChange, handleFinalizarCompra } = useCheckout();
+  const { formData, handleInputChange, handleFinalizarCompra, enviando } = useCheckout();
   const total = getCartTotal();
 
   return (
@@ -65,9 +65,16 @@ export const CheckoutForm = () => {
         <button
           type="submit"
           className="btn bg-pink"
-          style={{ width: '100%', marginTop: '0.4rem', fontWeight: 800 }}
+          disabled={enviando}
+          style={{
+            width: '100%',
+            marginTop: '0.4rem',
+            fontWeight: 800,
+            opacity: enviando ? 0.7 : 1,
+            cursor: enviando ? 'not-allowed' : 'pointer',
+          }}
         >
-          Confirmar y Finalizar Pedido
+          {enviando ? 'Guardando pedido en Firebase...' : 'Confirmar y Finalizar Pedido'}
         </button>
       </form>
     </div>

@@ -76,18 +76,39 @@ https://github.com/MariuLorenzo/REcircular_REACT
 ## 🚀 Requisitos y Características Implementadas
 
 ### 1. Requisitos Funcionales (RF)
-- **Carga Asíncrona de Catálogo**: Consumo de datos desde `/productos.json` (ubicado en `public/`) mediante `fetch` asíncrono y simulación de latencia de red en `ItemListContainer`.
+- **Base de Datos en Tiempo Real (Firebase Firestore)**: Catálogo sincronizado en tiempo real (`onSnapshot`) con operaciones CRUD completas.
+- **Autenticación y Seguridad (Firebase Auth)**:
+  - Sistema de autenticación con `AuthContext` y `useAuth`.
+  - Rutas privadas protegidas con `ProtectedRoute` (`/admin`).
+  - Credenciales predeterminadas del Administrador:
+    - **Usuario**: `admin@admin.com`
+    - **Contraseña**: `admin123`
+- **Panel de Administración (AdminLayout)**:
+  - Interfaz dedicada y profesional con barra lateral para el administrador.
+  - **Alta de productos**: Formulario controlado con validaciones (nombre obligatorio, precio > 0, stock, etc.).
+  - **Edición de productos**: Actualización inmediata en Firestore.
+  - **Eliminación con Modal**: Modal de confirmación estilizado antes de borrar definitivamente una prenda.
+  - **Semillado asistido**: Botón para importar automáticamente el catálogo inicial de 12 prendas con un clic.
+  - **Gestor de Órdenes**: Vista en tiempo real de todos los pedidos realizados por los clientes con datos de contacto y desglose de prendas.
+- **Búsqueda en Tiempo Real y Paginación**:
+  - Barra de búsqueda interactiva por nombre, descripción o época.
+  - Paginador dinámico para optimizar la visualización del catálogo.
+- **SEO Dinámico y Accesibilidad**:
+  - Gestión dinámica de `<title>` y etiquetas `<meta>` mediante `react-helmet-async`.
 - **Navegación Declarativa (SPA)**: Navegación instantánea y sin recarga de página mediante `react-router-dom`:
   - `/`: Página de inicio con hero banner, propuesta de valor y accesos directos.
-  - `/productos`: Catálogo completo con filtrado dinámico por categorías.
-  - `/producto/:id`: Vista de detalle individual parametrizada.
-  - `/carrito`: Vista del carrito de compras con resumen, subtotal y total.
+  - `/productos`: Catálogo completo con buscador, filtros dinámicos y paginador.
+  - `/producto/:id`: Vista de detalle individual parametrizada con consulta a Firestore.
+  - `/carrito`: Vista del carrito de compras modular con SRP (CartItem, CartEmpty).
+  - `/checkout`: Pantalla dedicada de finalización de compra con guardado en Firestore.
+  - `/login`: Formulario de acceso al panel administrador.
+  - `/admin`: Panel de control protegido para gestión de inventario y pedidos.
 - **Gestión Global del Carrito**:
   - `addToCart(producto, cantidad)` con validación de stock disponible.
   - Actualización reactiva y en tiempo real del badge en el `CartWidget` (`getCartQuantity`).
   - Cálculo de subtotales individuales y total acumulado (`getCartTotal`).
   - `clearCart()` para vaciar el carrito y controles para aumentar o disminuir unidades.
-  - Simulación de checkout con formulario y generación de orden de compra.
+  - Persistencia en `localStorage` y en Firestore al confirmar la compra.
 - **Información Corporativa**:
   - Encabezado con navegación accesible y `CartWidget`.
   - Pie de página institucional con valores de marca, contacto y **3 tarjetas completas del equipo curador**.
@@ -139,22 +160,39 @@ El formato de la página es _responsive_ 🖥️💻📱
 
 ## 💻 Instrucciones para Ejecutar en Local
 
-1. **Instalar dependencias**:
+1. **Clonar el repositorio**:
+   ```bash
+   git clone https://github.com/MariuLorenzo/REcircular_REACT.git
+   cd REcircular_REACT
+   ```
+
+2. **Instalar dependencias**:
    ```bash
    npm install
    ```
 
-2. **Iniciar servidor de desarrollo**:
+3. **Configurar Variables de Entorno**:
+   Copia el archivo `env.example.txt` a `.env.local` y completa con tus credenciales de Firebase:
+   ```env
+   VITE_FIREBASE_API_KEY=tu_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=tu_proyecto.firebaseapp.com
+   VITE_FIREBASE_PROJECT_ID=tu_proyecto
+   VITE_FIREBASE_STORAGE_BUCKET=tu_proyecto.firebasestorage.app
+   VITE_FIREBASE_MESSAGING_SENDER_ID=tu_sender_id
+   VITE_FIREBASE_APP_ID=tu_app_id
+   ```
+
+4. **Iniciar servidor de desarrollo**:
    ```bash
    npm run dev
    ```
 
-3. **Construir para producción**:
+5. **Construir para producción**:
    ```bash
    npm run build
    ```
 
-4. **Previsualizar la versión de producción**:
+6. **Previsualizar la versión de producción**:
    ```bash
    npm run preview
    ```

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export const HomePage = () => {
   const highlights = [
@@ -21,6 +22,14 @@ export const HomePage = () => {
 
   return (
     <div style={{ width: '100%' }}>
+      <Helmet>
+        <title>REcircular — Moda Circular y Tesoros Vintage</title>
+        <meta
+          name="description"
+          content="Tienda online sustentable de prendas vintage únicas de los 70s, 80s, 90s y 2000s rescatadas con amor."
+        />
+      </Helmet>
+
       {/* Hero Banner */}
       <section
         style={{

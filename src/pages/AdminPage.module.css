@@ -1,0 +1,154 @@
+.adminPage {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.toast {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  animation: slideIn 0.2s ease-out;
+}
+
+.toastExito {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.toastError {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.pageTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.5px;
+}
+
+.pageSubtitle {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.newProductBtn {
+  background: var(--accent-pink, #e81c6a);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(232, 28, 106, 0.25);
+}
+
+.newProductBtn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.seedHeaderBtn {
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: #334155;
+  padding: 0.75rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.seedHeaderBtn:hover {
+  border-color: #0f172a;
+  background: #f8fafc;
+}
+
+.tabsRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.tabBtn {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+
+.tabBtn:hover {
+  color: #0f172a;
+}
+
+.activeTab {
+  color: var(--accent-pink, #e81c6a) !important;
+  border-bottom-color: var(--accent-pink, #e81c6a) !important;
+}
+
+.loadingBox {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 4rem 1rem;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3.5px solid #e2e8f0;
+  border-top-color: var(--accent-pink, #e81c6a);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,203 @@
+.formContainer {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.formTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.closeBtn:hover {
+  background: #f1f5f9;
+  color: #ef4444;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1rem;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.input,
+.select,
+.textarea {
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #ffffff;
+  color: #1e293b;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--accent-pink, #e81c6a);
+  box-shadow: 0 0 0 3px rgba(232, 28, 106, 0.12);
+}
+
+.inputError {
+  border-color: #ef4444 !important;
+  background-color: #fef2f2;
+}
+
+.errorMsg {
+  color: #ef4444;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.imageUploadSection {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px dashed #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dividerOr {
+  text-align: center;
+  position: relative;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.fileInput {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.previewBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.previewLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.previewImg {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.actionRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.cancelButton {
+  padding: 0.65rem 1.25rem;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #64748b;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelButton:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.submitButton {
+  padding: 0.65rem 1.5rem;
+  background: var(--accent-pink, #e81c6a);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submitButton:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .grid2,
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+}

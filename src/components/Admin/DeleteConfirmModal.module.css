@@ -1,0 +1,135 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 9999;
+  animation: fadeIn 0.15s ease-out;
+}
+
+.modal {
+  background: #ffffff;
+  border-radius: 18px;
+  max-width: 440px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.iconArea {
+  margin-bottom: 1rem;
+}
+
+.warningIcon {
+  font-size: 2.5rem;
+  display: inline-block;
+  background: #fee2e2;
+  padding: 0.75rem;
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.5rem;
+}
+
+.message {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0 0 1.25rem;
+}
+
+.itemSummary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #f8fafc;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.thumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.summaryInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemCat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.itemPrice {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.cancelBtn {
+  flex: 1;
+  padding: 0.75rem;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #475569;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelBtn:hover {
+  background: #e2e8f0;
+}
+
+.deleteBtn {
+  flex: 1;
+  padding: 0.75rem;
+  background: #ef4444;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.deleteBtn:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.deleteBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
