@@ -2,14 +2,22 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 import styles from './Item.module.css';
 
-export const Item = ({ producto }) => {
-  const { id, nombre, precio, stock, imagen, epoca, talle } = producto;
+export const Item = ({ producto = {} }) => {
+  const {
+    id,
+    nombre = 'Prenda Vintage',
+    precio = 0,
+    stock = 1,
+    imagen = '/img/logo-recircular.png',
+    epoca,
+    talle,
+  } = producto;
   const { addToCart, cart } = useCart();
 
   // Cantidad ya en el carrito para verificar stock disponible
   const itemEnCarrito = cart.find((item) => item.id === id);
   const cantidadEnCarrito = itemEnCarrito ? itemEnCarrito.cantidad : 0;
-  const stockRestante = stock - cantidadEnCarrito;
+  const stockRestante = (Number(stock) || 0) - cantidadEnCarrito;
   const sinStock = stockRestante <= 0;
 
   const handleQuickAdd = () => {
@@ -21,7 +29,12 @@ export const Item = ({ producto }) => {
   return (
     <article className={styles.card}>
       <div className={styles.imageWrapper}>
-        <img src={imagen} alt={nombre} className={styles.image} loading="lazy" />
+        <img
+          src={imagen || '/img/logo-recircular.png'}
+          alt={nombre}
+          className={styles.image}
+          loading="lazy"
+        />
         {epoca && <span className={styles.badgeEpoca}>{epoca}</span>}
         {talle && <span className={styles.badgeTalle}>Talle {talle}</span>}
       </div>
@@ -33,7 +46,7 @@ export const Item = ({ producto }) => {
 
         <div className={styles.pricingRow}>
           <span className={styles.price}>
-            ${precio.toLocaleString('es-AR')}
+            ${Number(precio || 0).toLocaleString('es-AR')}
           </span>
           <span
             className={`${styles.stock} ${

@@ -4,13 +4,24 @@ import { Helmet } from 'react-helmet-async';
 import { useCart } from '../../context/CartContext';
 import styles from './ItemDetail.module.css';
 
-export const ItemDetail = ({ producto }) => {
-  const { id, nombre, precio, stock, imagen, descripcion, categoria, talle, epoca, condicion } = producto;
+export const ItemDetail = ({ producto = {} }) => {
+  const {
+    id,
+    nombre = 'Prenda Vintage',
+    precio = 0,
+    stock = 1,
+    imagen = '/img/logo-recircular.png',
+    descripcion = '',
+    categoria = 'Varios',
+    talle,
+    epoca,
+    condicion,
+  } = producto;
   const { addToCart, cart } = useCart();
 
   const itemEnCarrito = cart.find((item) => item.id === id);
   const cantidadEnCarrito = itemEnCarrito ? itemEnCarrito.cantidad : 0;
-  const stockRestante = stock - cantidadEnCarrito;
+  const stockRestante = (Number(stock) || 0) - cantidadEnCarrito;
 
   const [cantidad, setCantidad] = useState(stockRestante > 0 ? 1 : 0);
   const [agregado, setAgregado] = useState(false);

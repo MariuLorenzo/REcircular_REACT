@@ -14,17 +14,28 @@ export const ItemListContainer = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    setCargando(true);
-    setError(null);
+    // Carga inicial inmediata para experiencia instantánea
+    fetch('/productos.json')
+      .then((r) => r.json())
+      .then((data) => {
+        setProductos((actual) => (actual.length === 0 ? data : actual));
+        setCargando(false);
+      })
+      .catch(() => {});
 
     // Escucha en tiempo real de Firestore
     const unsubscribe = subscribeProducts(
       (items) => {
-        if (items && items.length > 0) {
-          setProductos(items);
+        // Filtramos para asegurar que sean prendas completas y válidas
+        const itemsValidos = (items || []).filter(
+          (item) => item && item.nombre && (item.precio !== undefined && item.precio !== null)
+        );
+
+        if (itemsValidos.length > 0) {
+          setProductos(itemsValidos);
           setCargando(false);
         } else {
-          // Si Firestore aún no fue semillado por el admin, leemos el catálogo estático como respaldo
+          // Si Firestore sólo tiene documentos de prueba vacíos, aseguramos el catálogo base
           fetch('/productos.json')
             .then((r) => r.json())
             .then((data) => {
@@ -32,14 +43,12 @@ export const ItemListContainer = () => {
               setCargando(false);
             })
             .catch(() => {
-              setProductos([]);
               setCargando(false);
             });
         }
       },
       (err) => {
-        console.error('Error al conectar con Firestore:', err);
-        // Respaldo en caso de error de red o permisos
+        console.warn('Conexión con Firestore pendiente o con restricciones, usando catálogo base:', err);
         fetch('/productos.json')
           .then((r) => r.json())
           .then((data) => {

@@ -19,7 +19,7 @@ export const ItemDetailContainer = () => {
     getProductById(id)
       .then((itemFirestore) => {
         if (cancelado) return;
-        if (itemFirestore) {
+        if (itemFirestore && itemFirestore.nombre) {
           setProducto(itemFirestore);
           setCargando(false);
         } else {

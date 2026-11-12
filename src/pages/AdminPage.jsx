@@ -40,7 +40,8 @@ export const AdminPage = () => {
     setCargando(true);
     const unsubscribe = subscribeProducts(
       (items) => {
-        setProductos(items);
+        const itemsValidos = (items || []).filter((i) => i && i.nombre);
+        setProductos(itemsValidos);
         setCargando(false);
       },
       (err) => {
