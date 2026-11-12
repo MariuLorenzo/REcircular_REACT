@@ -91,8 +91,8 @@ export const ItemDetail = ({ producto = {} }) => {
                 }`}
               >
                 {sinStock
-                  ? 'Agotado'
-                  : `${stockRestante} unidad${stockRestante > 1 ? 'es' : ''}`}
+                  ? '✨ Ya encontró nuevo dueño'
+                  : `${stockRestante} unidad${stockRestante > 1 ? 'es disponible' + (stockRestante > 1 ? 's' : '') : ''}`}
               </span>
             </div>
           </div>
@@ -137,7 +137,7 @@ export const ItemDetail = ({ producto = {} }) => {
                   disabled={sinStock}
                   className={`btn bg-primary ${styles.addToCartBtn}`}
                 >
-                  {sinStock ? 'Sin stock disponible' : '🛍️ Agregar al Carrito'}
+                  {sinStock ? '✨ Prenda agotada (Pieza única ya reservada)' : '🛍️ Agregar al Carrito'}
                 </button>
               </>
             ) : (

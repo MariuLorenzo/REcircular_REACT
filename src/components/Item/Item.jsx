@@ -50,10 +50,10 @@ export const Item = ({ producto = {} }) => {
           </span>
           <span
             className={`${styles.stock} ${
-              stockRestante <= 1 ? styles.stockLow : ''
+              sinStock ? styles.stockLow : stockRestante <= 1 ? styles.stockLow : ''
             }`}
           >
-            {sinStock ? 'Sin stock' : `Stock: ${stockRestante}`}
+            {sinStock ? '✨ Pieza vendida' : stockRestante === 1 ? '¡Última unidad!' : `Disponibles: ${stockRestante}`}
           </span>
         </div>
 
@@ -63,9 +63,9 @@ export const Item = ({ producto = {} }) => {
             className={`btn bg-primary ${styles.addButton}`}
             onClick={handleQuickAdd}
             disabled={sinStock}
-            title={sinStock ? 'Sin stock disponible' : 'Agregar al carrito'}
+            title={sinStock ? 'Esta prenda vintage ya encontró nuevo dueño' : 'Agregar al carrito'}
           >
-            {sinStock ? 'Agotado' : '🛒 Agregar'}
+            {sinStock ? 'Ya reservada' : '🛒 Agregar'}
           </button>
 
           <Link to={`/producto/${id}`} className={styles.detailLink}>

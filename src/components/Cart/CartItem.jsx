@@ -50,7 +50,7 @@ export const CartItem = ({ item }) => {
           </button>
         </div>
         {item.cantidad >= item.stock && (
-          <span className={styles.stockLimit}>Máx stock</span>
+          <span className={styles.stockLimit}>Pieza única alcanzada</span>
         )}
       </div>
 
