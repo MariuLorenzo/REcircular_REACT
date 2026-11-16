@@ -4,13 +4,13 @@
 # 🧥 REcircular — E-Commerce SPA (Feria Americana Vintage)
 
 Proyecto Final de E-Commerce desarrollado en **React** y **Vite**, estructurado como una **Single Page Application (SPA)** de alto rendimiento, modular y accesible.
-Este proyecto está desarrollado en Septiembre de 2026 para Talento Tech en República Argentina 🇦🇷 :argentina: 😉 
+Este proyecto está desarrollado entre Septiembre y Noviembre de 2026 para Talento Tech en República Argentina 🇦🇷 :argentina: 😉 
 
 ---
 
 ## 🎯 Objetivo y Temática
 REcircular es una tienda online de ropa usada y tesoros textiles vintage 
-(estilo "feria americana"), donde cada prenda cuenta una historia y tiene un stock limitado. Fomenta el consumo de "circular", de moda sustentable y la resignificación de piezas de los años 70s, 80s, 90s y 2000s.
+(estilo "feria americana"), donde cada prenda cuenta una historia y tiene un stock limitado. Fomenta el consumo "recircular", de moda sustentable y la resignificación de piezas de los años 70s, 80s, 90s y 2000s.
 
 ---
 #
