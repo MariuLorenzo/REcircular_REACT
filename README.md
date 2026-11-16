@@ -1,259 +1,258 @@
-
----
-
 # 🧥 REcircular — E-Commerce SPA (Feria Americana Vintage)
 
-Proyecto Final de E-Commerce desarrollado en **React** y **Vite**, estructurado como una **Single Page Application (SPA)** de alto rendimiento, modular y accesible.
-Este proyecto está desarrollado entre Septiembre y Noviembre de 2026 para Talento Tech en República Argentina 🇦🇷 :argentina: 😉 
+Proyecto Final de E-Commerce desarrollado en **React 19** y **Vite**, estructurado como una **Single Page Application (SPA)** de alto rendimiento, modular y accesible.
+Desarrollado entre Septiembre y Noviembre de 2026 para Talento Tech en República Argentina 🇦🇷.
+
+[![Estado](https://img.shields.io/badge/STATUS-ENTREGA%20FINAL%20%2F%20PRODUCCI%C3%93N-brightgreen?style=for-the-badge)](#)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://recircular-react.vercel.app/)
+[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](#)
+[![React](https://img.shields.io/badge/React%2019-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](#)
+[![React Router 7](https://img.shields.io/badge/React_Router_7-CA4245?style=for-the-badge&logo=react-router&logoColor=white)](#)
 
 ---
 
-## 🎯 Objetivo y Temática
-REcircular es una tienda online de ropa usada y tesoros textiles vintage 
-(estilo "feria americana"), donde cada prenda cuenta una historia y tiene un stock limitado. Fomenta el consumo "recircular", de moda sustentable y la resignificación de piezas de los años 70s, 80s, 90s y 2000s.
+## 🎯 Objetivo y Propuesta de Valor
+**REcircular** es una plataforma de comercio electrónico orientada a la moda sustentable y la economía circular. Especializada en indumentaria usada y tesoros textiles vintage (estilo feria americana), cada prenda cuenta una historia singular y cuenta con stock unitario.
 
----
-#
-## **«AIE Creations by Mariu»**  ✨
-
-Soy «Mariü» y mi proyecto de desarrollo consciente se llama «AIE Creations».<br>
-Combino la lógica del software, el diseño UX/UI y una sólida formación en humanidades para crear soluciones tecnológicas con propósito. En mi vida profesional hice un recorrido interdisciplinario que incluye docencia, coaching, terapia, comunicación, marketing, producción y artes visuales. Desde esa mirada holística, entiendo que el código informático y los mapas mentales comparten una misma esencia: estructuran la forma en que interactuamos con el mundo. <br>
-Hoy transformo esa versatilidad en productos digitales funcionales, humanos y sostenibles, aportando una perspectiva empática, curiosa y orientada a resolver problemas reales. 
-
-#
-## **Autora** ✒️
-
-* **Mariela Lorenzo** = [MariuLorenzo](https://github.com/MariuLorenzo)
-
-<img src="https://avatars.githubusercontent.com/u/114081375?v=4" width=115><br><sub> Mariü Lorenzo </sub>
-
-#
-## Desarrollo del Proyecto 💡
-
-* [MariuLorenzo](https://github.com/MariuLorenzo)
-
-* [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](#)
-
-#
-## Despliegue 📦
-
-https://recircular-react.vercel.app/
-
-[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/)
-
-#
-## Versiones - Repositorio 📌
-
-https://github.com/MariuLorenzo/REcircular_REACT
-
-[![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)](#)
+El proyecto promueve:
+* **Consumo Consciente**: Extensión del ciclo de vida de piezas originales de los años 70s, 80s, 90s y 2000s.
+* **Experiencia de Usuario Fluida (SPA)**: Navegación instantánea sin recargas de página, optimizada para móviles y escritorio.
+* **Gestión Integral en Tiempo Real**: Panel administrativo seguro para control de stock, catálogo y pedidos centralizados en la nube con Firebase.
 
 ---
 
-#
-## Ejecutando las pruebas ⚙️
-#
+## 👩‍💻 «AIE Creations by Mariu» — Autora
+Soy **«Mariü»** (Mariela Lorenzo) y mi proyecto de desarrollo consciente se denomina **«AIE Creations»**.  
+Combino la lógica del software, el diseño UX/UI y una sólida formación en humanidades para crear soluciones tecnológicas con propósito. Con un recorrido interdisciplinario que integra docencia, coaching, terapia, comunicación, marketing, producción y artes visuales, entiendo que el código informático y los mapas mentales estructuran la forma en que interactuamos con el mundo.
 
-![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green)
+* **Autora**: Mariela Lorenzo ([@MariuLorenzo](https://github.com/MariuLorenzo))
+* **Portfolio / GitHub**: [github.com/MariuLorenzo](https://github.com/MariuLorenzo)
+* **LinkedIn**: [linkedin.com/in/mariu-lorenzo](https://www.linkedin.com/in/mariu-lorenzo/)
+* **Contacto**: `mariulorenzo@gmail.com`
+* **Despliegue en Producción**: [https://recircular-react.vercel.app/](https://recircular-react.vercel.app/)
 
-#
-## Construido con 🛠️
-#
+---
 
-* [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#)
-* ![CSS](https://img.shields.io/badge/CSS-563d7c?&style=flat&logo=css3&logoColor=white)
-* [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#)
-* ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
-* ![Vite](https://img.shields.io/badge/-Vite-B73BFE?style=flat&logo=vite&logoColor=white)
-* [![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=visualstudiocode&logoColor=white)](#)
-* [![Figma](https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white)](#)
-* [![Canva](https://custom-icon-badges.demolab.com/badge/Canva-%2300C4CC.svg?&logo=canva&logoColor=white)](#)
-* [![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?logo=GoogleChrome&logoColor=white)](#)
-* [![Git](https://img.shields.io/badge/github-repo-blue?logo=github)](#)
-* [![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?logo=vercel&logoColor=white)](#)
+## 🛠️ Stack Tecnológico y Herramientas
 
-#
-## 🚀 Requisitos y Características Implementadas
+| Área | Tecnologías |
+|---|---|
+| **Frontend Core** | React 19, JavaScript (ES6+), HTML5 Semántico, CSS3 Modules (`.module.css`) |
+| **Tooling & Build** | Vite 8, ESLint 10, npm |
+| **Ruteo & Navegación** | React Router DOM v7 (rutas anidadas, `<Outlet />`, `useParams`, `useLocation`, `useNavigate`) |
+| **Backend & Cloud Services** | **Google Firebase v12** (Authentication, Cloud Firestore, Cloud Storage) |
+| **Gestión de Estado** | React Context API (`CartContext`, `AuthContext`) + Custom Hooks (`useCart`, `useAuth`, `useCheckout`) |
+| **SEO & Metadatos** | React Helmet Async (`react-helmet-async`) |
+| **Despliegue & Hosting** | Vercel (CI/CD automático vinculado a GitHub branch `main`) |
+| **Diseño & Prototipado** | Figma, Canva, Adobe Photoshop |
 
-### 1. Requisitos Funcionales (RF)
-- **Base de Datos en Tiempo Real (Firebase Firestore)**: Catálogo sincronizado en tiempo real (`onSnapshot`) con operaciones CRUD completas.
-- **Autenticación y Seguridad (Firebase Auth)**:
-  - Sistema de autenticación con `AuthContext` y `useAuth`.
-  - Rutas privadas protegidas con `ProtectedRoute` (`/admin`).
-  - Credenciales predeterminadas del Administrador:
-    - **Usuario**: `admin@admin.com`
-    - **Contraseña**: `admin123`
-- **Panel de Administración (AdminLayout)**:
-  - Interfaz dedicada y profesional con barra lateral para el administrador.
-  - **Alta de productos**: Formulario controlado con validaciones (nombre obligatorio, precio > 0, stock, etc.).
-  - **Edición de productos**: Actualización inmediata en Firestore.
-  - **Eliminación con Modal**: Modal de confirmación estilizado antes de borrar definitivamente una prenda.
-  - **Semillado asistido**: Botón para importar automáticamente el catálogo inicial de 12 prendas con un clic.
-  - **Gestor de Órdenes**: Vista en tiempo real de todos los pedidos realizados por los clientes con datos de contacto y desglose de prendas.
-- **Búsqueda en Tiempo Real y Paginación**:
-  - Barra de búsqueda interactiva por nombre, descripción o época.
-  - Paginador dinámico para optimizar la visualización del catálogo.
-- **SEO Dinámico y Accesibilidad**:
-  - Gestión dinámica de `<title>` y etiquetas `<meta>` mediante `react-helmet-async`.
-- **Navegación Declarativa (SPA)**: Navegación instantánea y sin recarga de página mediante `react-router-dom`:
-  - `/`: Página de inicio con hero banner, propuesta de valor y accesos directos.
-  - `/productos`: Catálogo completo con buscador, filtros dinámicos y paginador.
-  - `/producto/:id`: Vista de detalle individual parametrizada con consulta a Firestore.
-  - `/carrito`: Vista del carrito de compras modular con SRP (CartItem, CartEmpty).
-  - `/checkout`: Pantalla dedicada de finalización de compra con guardado en Firestore.
-  - `/login`: Formulario de acceso al panel administrador.
-  - `/admin`: Panel de control protegido para gestión de inventario y pedidos.
-- **Gestión Global del Carrito**:
-  - `addToCart(producto, cantidad)` con validación de stock disponible.
-  - Actualización reactiva y en tiempo real del badge en el `CartWidget` (`getCartQuantity`).
-  - Cálculo de subtotales individuales y total acumulado (`getCartTotal`).
-  - `clearCart()` para vaciar el carrito y controles para aumentar o disminuir unidades.
-  - Persistencia en `localStorage` y en Firestore al confirmar la compra.
-- **Información Corporativa**:
-  - Encabezado con navegación accesible y `CartWidget`.
-  - Pie de página institucional con valores de marca, contacto y **3 tarjetas completas del equipo curador**.
+---
 
-### 2. Requisitos Técnicos y Arquitectura (RT & RA)
-- **Patrón Contenedor / Presentacional (Smart vs. Dumb components)**:
-  - `ItemListContainer` (manejo de estado y llamadas asíncronas) ➡️ `ItemList` (mapeador) ➡️ `Item` (tarjeta unitaria).
-  - `ItemDetailContainer` (extracción de parámetros con `useParams` y fetching condicional) ➡️ `ItemDetail` (interfaz de producto con contador de stock).
-- **Ciclo de Vida y Side Effects**: Uso estricto de `useEffect` con dependencias vacías `[]` para la carga inicial y `[id]` para la sincronización del detalle dinámico.
-- **Context API**: `CartContext` con `createContext`, `CartProvider` y el custom hook `useCart` para evitar el *prop drilling*.
-- **Estilos Modulares**: CSS Modules (`.module.css`) en todos los componentes para encapsular estilos y evitar colisiones globales.
-- **Buenas Prácticas**: Convención `PascalCase`, exportaciones nombradas (`export const`), claves únicas `key={prod.id}` e inmutabilidad en el manejo de estado.
+## 🔥 Arquitectura e Integración con Firebase
+
+La aplicación implementa una integración desacoplada y reactiva mediante una capa de servicios centralizada (`src/services/productService.js`) que interactúa con el SDK modular de Firebase:
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                       REcircular Frontend                       │
+│                                                                 │
+│   ┌─────────────────────┐             ┌─────────────────────┐   │
+│   │    Catálogo / UI    │             │   Panel Admin / UI  │   │
+│   │ (ItemListContainer) │             │ (ProductForm/List)  │   │
+│   └──────────┬──────────┘             └──────────┬──────────┘   │
+│              │                                   │              │
+│              ▼                                   ▼              │
+│       subscribeProducts()                 CRUD / Seed / Auth    │
+└──────────────┼───────────────────────────────────┼──────────────┘
+               │                                   │
+               ▼                                   ▼
+ ┌───────────────────────────┐       ┌───────────────────────────┐
+ │   Cloud Firestore (NoSQL) │       │   Firebase Authentication │
+ │   - Colección /productos  │       │   - Email / Password      │
+ │   - Colección /ordenes    │       │   - Sesiones persistentes │
+ └───────────────────────────┘       └───────────────────────────┘
+```
+
+### 1. Cloud Firestore (Base de Datos NoSQL en Tiempo Real)
+* **Sincronización Reactiva (`onSnapshot`)**: El catálogo de prendas escucha cambios en tiempo real. Cualquier alta, modificación o baja ejecutada desde el panel administrativo impacta instantáneamente en la tienda de todos los usuarios sin necesidad de recargar la página (`F5`).
+* **Colecciones Principales**:
+  * `/productos`: Documentos con `nombre`, `precio`, `categoria`, `stock`, `talle`, `epoca`, `condicion`, `imagen`, `descripcion` y marca temporal `createdAt`.
+  * `/ordenes`: Registro inmutable de compras con ticket (`#RC-XXXXXX`), datos del comprador (`cliente`, `email`, `telefono`, `direccion`), desglose de prendas adquiridas, total abonado y fecha.
+
+### 2. Firebase Authentication (Seguridad y Acceso Administrativo)
+* **Control de Acceso Basado en Contexto (`AuthContext`)**: Maneja el ciclo de vida de la sesión con `onAuthStateChanged`.
+* **Rutas Privadas (`ProtectedRoute`)**: Intercepta intentos de acceso a `/admin`, redirigiendo automáticamente a `/login` si no existe una sesión válida.
+* **Credenciales Oficiales del Administrador**:
+  * **Email**: `admin@admin.com`
+  * **Contraseña**: `admin123`
+
+### 3. Firebase Cloud Storage
+* Almacén de objetos multimedia para fotografías de nuevas prendas subidas desde el formulario del panel administrativo mediante `uploadBytes` y `getDownloadURL`.
+
+### 4. Reglas de Seguridad Granulares
+Firestore opera bajo reglas que balancean accesibilidad pública y resguardo administrativo:
+* **Productos**: Lectura pública irrestricta (`allow read: if true`); escritura reservada a administradores autenticados (`allow write: if request.auth != null`).
+* **Órdenes**: Creación pública permitida al concretar compras en el checkout (`allow create: if true`); lectura restringida exclusivamente a usuarios autenticados.
+
+---
+
+## ⚡ Modos de Carga y Resiliencia del Catálogo
+
+Para garantizar una experiencia de usuario óptima en cualquier condición de red, la carga del catálogo implementa un **patrón híbrido de alta disponibilidad**:
+
+1. **Carga Inmediata Local (Zero-Lag Fallback)**:  
+   Al montar `ItemListContainer`, el sistema hidrata el catálogo en menos de 50 ms a partir de `public/productos.json`. Esto previene pantallas en blanco o bloqueos visuales si la conexión celular es inestable.
+2. **Sincronización Cloud Prioritaria**:  
+   En simultáneo, el listener de Firestore toma el control. Si la base de datos contiene documentos válidos, estos sobrescriben fluidamente el estado local con el stock más reciente.
+3. **Semillado Asistido (One-Click Seed)**:  
+   El panel de control incluye una rutina automatizada (`seedInitialCatalog`) que permite poblar la colección de Firestore con las 12 piezas vintage canónicas con un único clic desde la interfaz.
+
+---
+
+## 🚀 Requisitos Funcionales y Características Destacadas
+
+### 🛍️ Experiencia del Cliente (Tienda Pública)
+* **Búsqueda en Tiempo Real**: Filtrado dinámico mientras el usuario escribe, evaluando coincidencias en nombre, época o descripción.
+* **Filtros por Categoría**: Selector adaptable por prendas (Abrigos, Pantalones, Remeras, Vestidos, etc.).
+* **Paginación Dinámica**: Distribución controlada (8 prendas por página) con navegación anterior/siguiente y salto directo por número.
+* **Ficha de Detalle de Prenda (`/producto/:id`)**: Consulta parametrizada con selector interactivo de unidades respetando el stock disponible.
+* **Carrito Global Modular (Principio SRP)**:
+  * Desacoplado en componentes especializados: `CartItem`, `CartEmpty`, `CheckoutForm`, `OrderSuccess`.
+  * Contador dinámico en el `CartWidget` del encabezado.
+  * Persistencia dual en `localStorage` (para no perder el carrito al cerrar la pestaña) y en Firestore al concretar la compra.
+* **Checkout Sustentable**: Validación de formulario con generación de ticket de compra único y confirmación inmediata.
+* **Mensajes Contextuales Cálidos**: Textos curados para moda circular (ej. *"✨ Ya encontró nuevo dueño"* en lugar del frío *"Sin stock"*).
+
+### 🔐 Panel de Control Administrativo (`/admin`)
+* **Layout Diferenciado (`AdminLayout`)**: Barra lateral exclusiva con información del usuario autenticado, accesos directos y cierre de sesión.
+* **CRUD Completo de Inventario**:
+  * **Creación**: Formulario controlado con validación de tipos, precio > 0, stock y selector de épocas.
+  * **Edición**: Precarga automática de datos para modificaciones rápidas de precio o stock.
+  * **Eliminación Segura**: Modal de confirmación (`DeleteConfirmModal`) previo a la baja definitiva.
+* **Gestor de Órdenes**: Visualización en vivo de pedidos entrantes con datos de contacto, dirección de entrega y prendas solicitadas.
+
+### 🌐 SEO Dinámico y Accesibilidad
+* **Etiquetas Dinámicas con React Helmet**: Cada vista gestiona de forma autónoma su `<title>` y `<meta name="description">` para favorecer la indexación y usabilidad.
+* **Soporte SPA en Servidor**: Reglas de reescritura en `vercel.json` y `public/_redirects` para que rutas directas (como `/admin` o `/producto/3`) respondan con código HTTP 200 sin recargas ni errores 404.
 
 ---
 
 ## 📂 Estructura del Proyecto
 
 ```
+REcircular_REACT/
 ├── public/
-│   └── productos.json              <-- Catálogo vintage simulado
+│   ├── _redirects                     # Redirección SPA para hosting estático
+│   ├── productos.json                 # Catálogo semilla inicial
+│   └── img/                           # Logotipos, avatares y recursos gráficos
 ├── src/
 │   ├── components/
-│   │   ├── CartWidget/             <-- Ícono de bolsa con badge condicional
-│   │   ├── Footer/                 <-- Información corporativa + 3 tarjetas staff
-│   │   ├── Header/                 <-- Barra de navegación y accesos
-│   │   ├── Item/                   <-- Tarjeta de producto con stock y botón agregar
-│   │   ├── ItemDetail/             <-- Vista detallada con selector de cantidad
-│   │   ├── ItemDetailContainer/    <-- Contenedor del detalle con fetch por ID
-│   │   ├── ItemList/               <-- Grilla mapeadora con key obligatoria
-│   │   ├── ItemListContainer/      <-- Contenedor del catálogo y filtros
-│   │   └── Layout/                 <-- Layout común con Outlet
+│   │   ├── Admin/                     # Componentes del módulo de administración
+│   │   │   ├── AdminLayout.jsx        # Layout con Sidebar administrativo
+│   │   │   ├── AdminLayout.module.css
+│   │   │   ├── DeleteConfirmModal.jsx # Modal accesible de confirmación
+│   │   │   ├── OrdersList.jsx         # Visualizador de órdenes en tiempo real
+│   │   │   ├── ProductForm.jsx        # Formulario controlado de alta/edición
+│   │   │   └── ProductList.jsx        # Tabla con filtros, estados y acciones
+│   │   ├── Cart/                      # Componentes desacoplados del carrito (SRP)
+│   │   │   ├── CartEmpty.jsx
+│   │   │   ├── CartItem.jsx
+│   │   │   ├── CheckoutForm.jsx
+│   │   │   └── OrderSuccess.jsx
+│   │   ├── CartWidget/                # Widget reactivo en cabecera
+│   │   ├── Footer/                    # Footer institucional y tarjetas del equipo
+│   │   ├── Header/                    # Navegación principal con menú mobile
+│   │   ├── Item/                      # Card individual de prenda en catálogo
+│   │   ├── ItemDetail/                # Ficha extendida de producto
+│   │   ├── ItemDetailContainer/       # Contenedor asíncrono con getDoc
+│   │   ├── ItemList/                  # Grilla presentacional
+│   │   ├── ItemListContainer/         # Contenedor con búsqueda, filtros y paginación
+│   │   └── Layout/                    # PublicLayout para vistas de clientes
 │   ├── context/
-│   │   └── CartContext.jsx         <-- Context API, Provider y hook useCart
+│   │   ├── AuthContext.jsx            # Autenticación global con Firebase Auth
+│   │   └── CartContext.jsx            # Estado global del carrito y totales
+│   ├── firebase/
+│   │   └── firebase.js                # Inicialización modular (db, auth, storage)
+│   ├── hooks/
+│   │   └── useCheckout.js             # Lógica de procesamiento y guardado de compras
 │   ├── pages/
-│   │   ├── CartPage.jsx            <-- Vista del carrito y checkout
-│   │   └── HomePage.jsx            <-- Vista principal de bienvenida
-│   ├── App.jsx                     <-- Configuración de rutas (Routes / Route)
-│   ├── index.css                   <-- Reseteo y variables de diseño globales
-│   └── main.jsx                    <-- Entrada principal (BrowserRouter + CartProvider)
-├── package.json
-└── vite.config.js
+│   │   ├── AdminPage.jsx              # Vista orquestadora del panel admin
+│   │   ├── CartPage.jsx               # Vista dedicada del carrito
+│   │   ├── CheckoutPage.jsx           # Vista de cierre de orden
+│   │   ├── HomePage.jsx               # Landing page institucional y hero banner
+│   │   └── LoginPage.jsx              # Formulario de acceso autenticado
+│   ├── routes/
+│   │   └── ProtectedRoute.jsx         # Guardián de rutas autenticadas
+│   ├── services/
+│   │   └── productService.js          # Capa de abstracción para Firestore / Storage
+│   ├── App.jsx                        # Definición central de rutas y layouts
+│   ├── index.css                      # Variables CSS y estilos base globales
+│   └── main.jsx                       # Punto de entrada (Router, Helmet, Providers)
+├── env.example.txt                    # Plantilla de variables de entorno
+├── index.html                         # Documento raíz con lang="es" y tipografías
+├── package.json                       # Dependencias y scripts
+├── vercel.json                        # Configuración de despliegue en Vercel
+└── vite.config.js                     # Configuración de compilación con Vite
 ```
 
 ---
-#
-# Instalación 🔧
 
-El formato de la página es _responsive_ 🖥️💻📱
+## 💻 Instrucciones para Ejecución en Entorno Local
 
-## 💻 Instrucciones para Ejecutar en Local
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/MariuLorenzo/REcircular_REACT.git
+cd REcircular_REACT
+```
 
-1. **Clonar el repositorio**:
-   ```bash
-   git clone https://github.com/MariuLorenzo/REcircular_REACT.git
-   cd REcircular_REACT
-   ```
+### 2. Instalar dependencias
+```bash
+npm install
+```
 
-2. **Instalar dependencias**:
-   ```bash
-   npm install
-   ```
+### 3. Configurar variables de entorno
+Copia el archivo de plantilla a `.env.local`:
+```bash
+cp env.example.txt .env.local
+```
+Completa las variables con las credenciales de tu proyecto en Firebase Console:
+```env
+VITE_FIREBASE_API_KEY=tu_api_key
+VITE_FIREBASE_AUTH_DOMAIN=tu_proyecto.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=tu_proyecto
+VITE_FIREBASE_STORAGE_BUCKET=tu_proyecto.firebasestorage.app
+VITE_FIREBASE_MESSAGING_SENDER_ID=tu_sender_id
+VITE_FIREBASE_APP_ID=tu_app_id
+```
 
-3. **Configurar Variables de Entorno**:
-   Copia el archivo `env.example.txt` a `.env.local` y completa con tus credenciales de Firebase:
-   ```env
-   VITE_FIREBASE_API_KEY=tu_api_key
-   VITE_FIREBASE_AUTH_DOMAIN=tu_proyecto.firebaseapp.com
-   VITE_FIREBASE_PROJECT_ID=tu_proyecto
-   VITE_FIREBASE_STORAGE_BUCKET=tu_proyecto.firebasestorage.app
-   VITE_FIREBASE_MESSAGING_SENDER_ID=tu_sender_id
-   VITE_FIREBASE_APP_ID=tu_app_id
-   ```
+### 4. Iniciar en modo desarrollo
+```bash
+npm run dev
+```
+La aplicación quedará disponible en `http://localhost:5173/`.
 
-4. **Iniciar servidor de desarrollo**:
-   ```bash
-   npm run dev
-   ```
-
-5. **Construir para producción**:
-   ```bash
-   npm run build
-   ```
-
-6. **Previsualizar la versión de producción**:
-   ```bash
-   npm run preview
-   ```
+### 5. Compilación para producción
+```bash
+npm run build
+npm run preview
+```
 
 ---
 
-## 🌐 Despliegue en la Nube
-El proyecto está desplegado en **Vercel** 
-- Comando de compilación: `npm run build`
-- Directorio de salida: `dist`
+## 🌐 Despliegue en Producción (Vercel)
+
+El proyecto cuenta con integración continua (**CI/CD**) en la plataforma **Vercel**:
+* **URL de Producción**: [https://recircular-react.vercel.app/](https://recircular-react.vercel.app/)
+* **Directorio de salida compilado**: `dist`
+* **Ruteo de cliente**: Gestionado mediante reescrituras en `vercel.json` para soporte nativo de React Router en producción.
 
 ---
 
-#
-## Licencia 📄
-#
-®️ Este proyecto está bajo mi Licencia ©️ 
+## 📄 Licencia y Contacto
+Proyecto desarrollado por **Mariela Lorenzo** bajo licencia de autoría personal.
 
-😊 holis !  
-[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
+* 🌐 **Sitio Web**: [https://recircular-react.vercel.app/](https://recircular-react.vercel.app/)
+* 💼 **LinkedIn**: [linkedin.com/in/mariu-lorenzo](https://www.linkedin.com/in/mariu-lorenzo/)
+* 📧 **Email**: `mariulorenzo@gmail.com`
 
-Contacta con la autora para detalles:
-
-* [![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff)](#)
-https://www.linkedin.com/in/mariu-lorenzo/ 
-
-* [![Gmail](https://img.shields.io/badge/Gmail-D14836?logo=gmail&logoColor=white)](#)
-📧​ Mail: mariulorenzo@gmail.com
-
-#
-## Expresiones de Gratitud 🎁
-
-* Expande buenas vibras 📢💫
-* Da las gracias a diario 🤓💬!!
-
-[![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/kennethreitz)
-
-* Haz comunidad 🥰
-* Construye un futuro próspero y empático para el mundo ❤️🌎
-
----
- 
-«Ahora sé más de lo que sabía...el tiempo fluye como líquido entre mis manos.»
-
----
-
-## Hi there👋
-🔭 I'm currently working on becoming the best version of myself.
-
-🌱 I'm currently learning software development.
-
-👯 I'm looking to collaborate on interesting projects.
-
-🤔 I'm looking for help with "fixing the world."
-
-💬 Ask me about...anything (?)
-
-📫 How to contact me: mariulorenzo@gmail.com
-
-😄 Pronouns: She.
-
-⚡ Fun fact: My favorite place is water. I love to swim.
-
-<!--**MariuLorenzo/MariuLorenzo** is a ✨ _special_ ✨ repository because you can read it in its READ-ME-->
+> *«La moda circular no es una tendencia del pasado, sino una decisión consciente hacia el futuro.»* ✨
