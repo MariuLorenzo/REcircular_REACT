@@ -63,15 +63,15 @@ export const Header = () => {
         </nav>
 
         {/* Controles de Accesibilidad y Modo de Color */}
-        <div className={styles.themeControls} aria-label="Selector de accesibilidad y tema">
+        <div className={styles.themeControls} aria-label="Selector de tema">
           {/* Cartel Indicador del Modo Actual */}
           <span
             className={styles.themeBadge}
             role="status"
             aria-live="polite"
-            title={`Modo de color activo: ${infoTema.label} (${infoTema.descripcion})`}
+            title={`Modo actual: ${infoTema.label}`}
           >
-            <span aria-hidden="true">{infoTema.icon}</span> Modo: {infoTema.label}
+            <span aria-hidden="true">{infoTema.icon}</span> {infoTema.label}
           </span>
 
           {/* Selector accesible de Modos */}
@@ -79,12 +79,12 @@ export const Header = () => {
             value={theme}
             onChange={(e) => cambiarTema(e.target.value)}
             className={styles.themeSelect}
-            aria-label="Cambiar modo de visualización y accesibilidad"
-            title="Cambiar entre modo Ecología, Claro (AAA) u Oscuro (AAA)"
+            aria-label="Cambiar modo"
+            title="Cambiar entre Modo ecología, Modo claro o Modo oscuro"
           >
-            <option value={THEMES.ECOLOGIA}>🌱 Ecología (Vintage)</option>
-            <option value={THEMES.CLARO}>☀️ Claro (WCAG AAA)</option>
-            <option value={THEMES.OSCURO}>🌙 Oscuro (WCAG AAA)</option>
+            <option value={THEMES.ECOLOGIA}>Modo ecología 🌱</option>
+            <option value={THEMES.CLARO}>Modo claro ☀️</option>
+            <option value={THEMES.OSCURO}>Modo oscuro 🌙</option>
           </select>
         </div>
 
@@ -126,7 +126,7 @@ export const Header = () => {
         {/* Indicador y Selector de Modo en Mobile */}
         <div className={styles.mobileThemeArea}>
           <span className={styles.themeBadge} role="status" aria-live="polite">
-            <span aria-hidden="true">{infoTema.icon}</span> Modo: {infoTema.label}
+            <span aria-hidden="true">{infoTema.icon}</span> {infoTema.label}
           </span>
           <select
             value={theme}
@@ -134,9 +134,9 @@ export const Header = () => {
             className={styles.themeSelect}
             aria-label="Cambiar modo en móvil"
           >
-            <option value={THEMES.ECOLOGIA}>🌱 Ecología</option>
-            <option value={THEMES.CLARO}>☀️ Claro AAA</option>
-            <option value={THEMES.OSCURO}>🌙 Oscuro AAA</option>
+            <option value={THEMES.ECOLOGIA}>Modo ecología 🌱</option>
+            <option value={THEMES.CLARO}>Modo claro ☀️</option>
+            <option value={THEMES.OSCURO}>Modo oscuro 🌙</option>
           </select>
         </div>
 

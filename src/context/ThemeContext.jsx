@@ -9,9 +9,24 @@ export const THEMES = {
 };
 
 export const THEME_LABELS = {
-  [THEMES.ECOLOGIA]: { label: 'Ecología', icon: '🌱', descripcion: 'Paleta vintage cálida y sustentable original' },
-  [THEMES.CLARO]: { label: 'Claro (AAA)', icon: '☀️', descripcion: 'Alto contraste accesible WCAG AAA para luz de día' },
-  [THEMES.OSCURO]: { label: 'Oscuro (AAA)', icon: '🌙', descripcion: 'Alto contraste accesible WCAG AAA para baja iluminación' },
+  [THEMES.ECOLOGIA]: {
+    label: 'Modo ecología',
+    nombreCorto: 'Ecología',
+    icon: '🌱',
+    descripcion: 'Paleta vintage cálida, verde bosque y terracota',
+  },
+  [THEMES.CLARO]: {
+    label: 'Modo claro',
+    nombreCorto: 'Claro',
+    icon: '☀️',
+    descripcion: 'Paleta luminosa con verde agua y verde bosque',
+  },
+  [THEMES.OSCURO]: {
+    label: 'Modo oscuro',
+    nombreCorto: 'Oscuro',
+    icon: '🌙',
+    descripcion: 'Paleta carbón suave y marfil cálido sin brillos',
+  },
 };
 
 export const useTheme = () => {

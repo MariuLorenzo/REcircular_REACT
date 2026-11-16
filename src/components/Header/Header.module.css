@@ -2,9 +2,10 @@
   position: sticky;
   top: 0;
   z-index: 200;
-  background-color: var(--primary);
-  border-bottom: 3px solid #14be7d;
-  box-shadow: 0 4px 18px rgba(0, 5, 3, 0.1);
+  background-color: var(--header-bg);
+  border-bottom: 2px solid var(--border);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .container {
@@ -42,7 +43,7 @@
   border: none;
   cursor: pointer;
   padding: 0.35rem;
-  color: var(--text);
+  color: var(--header-text);
   font-size: 1.6rem;
   line-height: 1;
 }
@@ -58,20 +59,22 @@
   font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--text);
+  color: var(--header-text);
   padding: 0.45rem 1.1rem;
   border-radius: 9999px;
   transition: all 0.2s ease;
   background-color: transparent;
+  text-decoration: none;
 }
 
 .navLink:hover {
-  background-color: rgba(0, 5, 3, 0.08);
+  color: var(--header-link-hover-color);
+  background-color: var(--header-link-hover-bg);
 }
 
 .active {
-  background-color: var(--text);
-  color: var(--primary);
+  background-color: var(--header-link-active-bg);
+  color: var(--header-link-active-text);
 }
 
 .cartWrapper {
@@ -86,7 +89,7 @@
 }
 
 /* =========================================================================
-   DRAWER DESPLEGABLE MOBILE (Rosa sólido #e81c6a con acento menta)
+   DRAWER DESPLEGABLE MOBILE (Colores adaptables según el modo activo)
    ========================================================================= */
 
 .mobileDrawer {
@@ -96,12 +99,12 @@
   width: 270px;
   max-width: 82vw;
   height: 100vh;
-  background-color: var(--accent-pink);
-  color: #ffffff;
+  background-color: var(--drawer-bg);
+  color: var(--drawer-text);
   z-index: 300;
   display: flex;
   flex-direction: column;
-  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, color 0.3s ease;
   box-shadow: 6px 0 25px rgba(0, 0, 0, 0.35);
   padding: 1.25rem;
 }
@@ -115,20 +118,19 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 1rem;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid var(--drawer-header-border);
   margin-bottom: 1.25rem;
 }
 
 .drawerLogoImg {
   height: 42px;
   width: auto;
-  filter: brightness(0) invert(1);
 }
 
 .closeDrawerBtn {
   background: transparent;
   border: none;
-  color: #ffffff;
+  color: var(--drawer-text);
   font-size: 1.4rem;
   cursor: pointer;
   padding: 0.25rem;
@@ -145,29 +147,32 @@
 .drawerLink {
   font-size: 1rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--drawer-link-text);
   padding: 0.75rem 1rem;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.12);
-  transition: background 0.2s;
+  background-color: var(--drawer-link-bg);
+  transition: background 0.2s, color 0.2s;
   display: block;
+  text-decoration: none;
 }
 
 .drawerLink:hover {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: var(--drawer-link-hover-bg);
+  color: var(--drawer-link-text);
 }
 
 .drawerActive {
-  background-color: #ffffff;
-  color: var(--accent-pink);
+  background-color: var(--drawer-link-active-bg);
+  color: var(--drawer-link-active-text);
   font-weight: 800;
 }
 
 .drawerFooter {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid var(--drawer-header-border);
   padding-top: 1rem;
   font-size: 0.8rem;
   text-align: center;
+  color: var(--drawer-text);
   opacity: 0.9;
 }
 
@@ -180,7 +185,7 @@
 }
 
 /* =========================================================================
-   OPTIMIZACIÓN RESPONSIVE (< 400px, 900px, 1200px)
+   CONTROLES DE TEMA Y RESPONSIVE (< 400px, 768px, 900px, 1200px)
    ========================================================================= */
 
 .themeControls {
@@ -219,16 +224,17 @@
 }
 
 .themeSelect:focus-visible {
-  border-color: var(--accent-pink);
-  outline: 3px solid var(--accent-pink) !important;
+  border-color: var(--primary);
+  outline: 3px solid var(--primary) !important;
 }
 
 .mobileThemeArea {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--drawer-header-border);
+  margin-bottom: 0.75rem;
 }
 
 @media (max-width: 768px) {
