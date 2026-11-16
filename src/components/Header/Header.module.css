@@ -183,6 +183,60 @@
    OPTIMIZACIÓN RESPONSIVE (< 400px, 900px, 1200px)
    ========================================================================= */
 
+.themeControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.themeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--text);
+  background-color: var(--surface);
+  border: 1.5px solid var(--border);
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+}
+
+.themeSelect {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background-color: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.themeSelect:focus-visible {
+  border-color: var(--accent-pink);
+  outline: 3px solid var(--accent-pink) !important;
+}
+
+.mobileThemeArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .themeControls {
+    display: none;
+  }
+}
+
 @media (max-width: 400px) {
   .header {
     padding: 0.35rem 0;

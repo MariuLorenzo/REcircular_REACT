@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import { useTheme } from '../../context/ThemeContext';
 import { CartWidget } from '../CartWidget/CartWidget';
 import styles from './Header.module.css';
 
@@ -8,6 +9,7 @@ export const Header = () => {
   const [menuAbierto, setMenuAbierto] = useState(false);
   const location = useLocation();
   const { currentUser } = useAuth();
+  const { theme, cambiarTema, infoTema, THEMES } = useTheme();
 
   const toggleMenu = () => setMenuAbierto((prev) => !prev);
   const cerrarMenu = () => setMenuAbierto(false);
@@ -29,10 +31,10 @@ export const Header = () => {
         </button>
 
         {/* Logo Oficial de la App Recircular */}
-        <Link to="/" className={styles.logoLink} onClick={cerrarMenu}>
+        <Link to="/" className={styles.logoLink} onClick={cerrarMenu} aria-label="REcircular - Ir al inicio">
           <img
             src="/img/logo-recircular.png"
-            alt="Recircular — Feria Americana"
+            alt="Logotipo de REcircular Feria Americana Vintage"
             className={styles.logoImg}
           />
         </Link>
@@ -60,12 +62,39 @@ export const Header = () => {
           </Link>
         </nav>
 
+        {/* Controles de Accesibilidad y Modo de Color */}
+        <div className={styles.themeControls} aria-label="Selector de accesibilidad y tema">
+          {/* Cartel Indicador del Modo Actual */}
+          <span
+            className={styles.themeBadge}
+            role="status"
+            aria-live="polite"
+            title={`Modo de color activo: ${infoTema.label} (${infoTema.descripcion})`}
+          >
+            <span aria-hidden="true">{infoTema.icon}</span> Modo: {infoTema.label}
+          </span>
+
+          {/* Selector accesible de Modos */}
+          <select
+            value={theme}
+            onChange={(e) => cambiarTema(e.target.value)}
+            className={styles.themeSelect}
+            aria-label="Cambiar modo de visualización y accesibilidad"
+            title="Cambiar entre modo Ecología, Claro (AAA) u Oscuro (AAA)"
+          >
+            <option value={THEMES.ECOLOGIA}>🌱 Ecología (Vintage)</option>
+            <option value={THEMES.CLARO}>☀️ Claro (WCAG AAA)</option>
+            <option value={THEMES.OSCURO}>🌙 Oscuro (WCAG AAA)</option>
+          </select>
+        </div>
+
         {/* CartWidget siempre visible */}
         <div className={styles.cartWrapper}>
           <Link
             to="/carrito"
             className={`${styles.cartLink} ${isActive('/carrito') ? styles.activeCart : ''}`}
             onClick={cerrarMenu}
+            aria-label="Ver carrito de compras"
             title="Ver carrito de compras"
           >
             <CartWidget />
@@ -88,12 +117,30 @@ export const Header = () => {
             type="button"
             className={styles.closeDrawerBtn}
             onClick={cerrarMenu}
-            aria-label="Cerrar menú"
+            aria-label="Cerrar menú de navegación"
           >
             ✕
           </button>
         </div>
-        <nav className={styles.drawerNav}>
+
+        {/* Indicador y Selector de Modo en Mobile */}
+        <div className={styles.mobileThemeArea}>
+          <span className={styles.themeBadge} role="status" aria-live="polite">
+            <span aria-hidden="true">{infoTema.icon}</span> Modo: {infoTema.label}
+          </span>
+          <select
+            value={theme}
+            onChange={(e) => cambiarTema(e.target.value)}
+            className={styles.themeSelect}
+            aria-label="Cambiar modo en móvil"
+          >
+            <option value={THEMES.ECOLOGIA}>🌱 Ecología</option>
+            <option value={THEMES.CLARO}>☀️ Claro AAA</option>
+            <option value={THEMES.OSCURO}>🌙 Oscuro AAA</option>
+          </select>
+        </div>
+
+        <nav className={styles.drawerNav} aria-label="Navegación móvil">
           <Link
             to="/"
             className={`${styles.drawerLink} ${isActive('/') ? styles.drawerActive : ''}`}
@@ -130,7 +177,7 @@ export const Header = () => {
 
       {/* Backdrop overlay para cerrar el menú */}
       {menuAbierto && (
-        <div className={styles.backdrop} onClick={cerrarMenu} />
+        <div className={styles.backdrop} onClick={cerrarMenu} aria-hidden="true" />
       )}
     </header>
   );

@@ -111,8 +111,9 @@ export const ProductForm = ({ initialData, onSubmit, onCancel, loading }) => {
         <div className={styles.grid2}>
           {/* Nombre */}
           <div className={styles.field}>
-            <label className={styles.label}>Nombre de la prenda *</label>
+            <label htmlFor="prod-nombre" className={styles.label}>Nombre de la prenda *</label>
             <input
+              id="prod-nombre"
               type="text"
               name="nombre"
               value={formData.nombre}
@@ -120,13 +121,14 @@ export const ProductForm = ({ initialData, onSubmit, onCancel, loading }) => {
               placeholder="Ej: Campera de Jean Levi's Vintage"
               className={`${styles.input} ${errores.nombre ? styles.inputError : ''}`}
             />
-            {errores.nombre && <span className={styles.errorMsg}>{errores.nombre}</span>}
+            {errores.nombre && <span className={styles.errorMsg} role="alert">{errores.nombre}</span>}
           </div>
 
           {/* Categoría */}
           <div className={styles.field}>
-            <label className={styles.label}>Categoría *</label>
+            <label htmlFor="prod-categoria" className={styles.label}>Categoría *</label>
             <select
+              id="prod-categoria"
               name="categoria"
               value={formData.categoria}
               onChange={handleChange}
@@ -144,8 +146,9 @@ export const ProductForm = ({ initialData, onSubmit, onCancel, loading }) => {
         <div className={styles.grid3}>
           {/* Precio */}
           <div className={styles.field}>
-            <label className={styles.label}>Precio ($ ARS) *</label>
+            <label htmlFor="prod-precio" className={styles.label}>Precio ($ ARS) *</label>
             <input
+              id="prod-precio"
               type="number"
               name="precio"
               value={formData.precio}
@@ -154,13 +157,14 @@ export const ProductForm = ({ initialData, onSubmit, onCancel, loading }) => {
               min="1"
               className={`${styles.input} ${errores.precio ? styles.inputError : ''}`}
             />
-            {errores.precio && <span className={styles.errorMsg}>{errores.precio}</span>}
+            {errores.precio && <span className={styles.errorMsg} role="alert">{errores.precio}</span>}
           </div>
 
           {/* Stock */}
           <div className={styles.field}>
-            <label className={styles.label}>Stock disponible *</label>
+            <label htmlFor="prod-stock" className={styles.label}>Stock disponible *</label>
             <input
+              id="prod-stock"
               type="number"
               name="stock"
               value={formData.stock}
@@ -168,13 +172,14 @@ export const ProductForm = ({ initialData, onSubmit, onCancel, loading }) => {
               min="0"
               className={`${styles.input} ${errores.stock ? styles.inputError : ''}`}
             />
-            {errores.stock && <span className={styles.errorMsg}>{errores.stock}</span>}
+            {errores.stock && <span className={styles.errorMsg} role="alert">{errores.stock}</span>}
           </div>
 
           {/* Talle */}
           <div className={styles.field}>
-            <label className={styles.label}>Talle</label>
+            <label htmlFor="prod-talle" className={styles.label}>Talle</label>
             <input
+              id="prod-talle"
               type="text"
               name="talle"
               value={formData.talle}
@@ -188,8 +193,9 @@ export const ProductForm = ({ initialData, onSubmit, onCancel, loading }) => {
         <div className={styles.grid2}>
           {/* Época */}
           <div className={styles.field}>
-            <label className={styles.label}>Época / Década</label>
+            <label htmlFor="prod-epoca" className={styles.label}>Época / Década</label>
             <input
+              id="prod-epoca"
               type="text"
               name="epoca"
               value={formData.epoca}
@@ -201,8 +207,9 @@ export const ProductForm = ({ initialData, onSubmit, onCancel, loading }) => {
 
           {/* Condición */}
           <div className={styles.field}>
-            <label className={styles.label}>Condición de conservación</label>
+            <label htmlFor="prod-condicion" className={styles.label}>Condición de conservación</label>
             <input
+              id="prod-condicion"
               type="text"
               name="condicion"
               value={formData.condicion}
@@ -216,8 +223,9 @@ export const ProductForm = ({ initialData, onSubmit, onCancel, loading }) => {
         {/* Imagen: URL o archivo */}
         <div className={styles.imageUploadSection}>
           <div className={styles.field}>
-            <label className={styles.label}>URL directa de la imagen</label>
+            <label htmlFor="prod-imagen-url" className={styles.label}>URL directa de la imagen</label>
             <input
+              id="prod-imagen-url"
               type="url"
               name="imagen"
               value={formData.imagen}
@@ -235,7 +243,9 @@ export const ProductForm = ({ initialData, onSubmit, onCancel, loading }) => {
           </div>
 
           <div className={styles.field}>
+            <label htmlFor="prod-imagen-file" className="visually-hidden">Subir imagen</label>
             <input
+              id="prod-imagen-file"
               type="file"
               accept="image/*"
               onChange={handleFileChange}
@@ -243,20 +253,21 @@ export const ProductForm = ({ initialData, onSubmit, onCancel, loading }) => {
             />
           </div>
 
-          {errores.imagen && <span className={styles.errorMsg}>{errores.imagen}</span>}
+          {errores.imagen && <span className={styles.errorMsg} role="alert">{errores.imagen}</span>}
 
           {previewUrl && (
             <div className={styles.previewBox}>
               <span className={styles.previewLabel}>Vista previa:</span>
-              <img src={previewUrl} alt="Vista previa" className={styles.previewImg} />
+              <img src={previewUrl} alt="Vista previa de la prenda subida" className={styles.previewImg} />
             </div>
           )}
         </div>
 
         {/* Descripción */}
         <div className={styles.field}>
-          <label className={styles.label}>Historia y detalles de la prenda</label>
+          <label htmlFor="prod-descripcion" className={styles.label}>Historia y detalles de la prenda</label>
           <textarea
+            id="prod-descripcion"
             name="descripcion"
             rows="3"
             value={formData.descripcion}

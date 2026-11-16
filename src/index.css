@@ -4,48 +4,100 @@
   box-sizing: border-box;
 }
 
-:root {
-  /* ===== PALETA ECOLÓGICA  ===== */
-
-  /* Verde bosque — color principal */
+:root, [data-theme="ecologia"] {
+  /* ===== PALETA ECOLÓGICA ORIGINAL ===== */
   --primary: #4ea973;
-  --primary-hover: #c2b500de;
+  --primary-hover: #3d8a5c;
   --primary-tint: rgba(74, 124, 94, 0.15);
 
-  /* Terracota / Rojizo — acento */
   --accent-pink: #b8532a;
   --pink-hover: #9e4422;
   --pink-tint: rgba(184, 83, 42, 0.12);
 
-  /* Camel / Dorado oscuro — secundario */
   --secondary: #8b6914;
   --secondary-hover: #7a5c12;
   --secondary-tint: rgba(139, 105, 20, 0.12);
 
-  /* Oliva / Verde musgo — acento complementario */
   --accent-lime: #6b8c4a;
 
-  /* Fondos cálidos — pergamino y crema */
   --bg: #f4dfbd;
   --surface: #fffdf7;
   --card: #f7fffa;
 
-  /* Bordes cálidos — taupe y siena claro */
   --border: #d4bfa0;
   --border-pink: #e0c5a8;
 
-  /* Tipografía */
   --text: #2a1a0e;
   --text-secondary: #5c3d2a;
 
-  /* Estados */
   --disabled: #c4a882;
   --danger: #b8532a;
   --success: #4a7c5e;
 
-  /* Fonts */
   --font-title: 'Berkshire Swash', cursive, serif;
   --font-body: 'Roboto Slab', serif;
+}
+
+/* ===== MODO CLARO (ALTO CONTRASTE WCAG AAA >= 7:1) ===== */
+[data-theme="claro"] {
+  --primary: #065f46;          /* Verde bosque AAA (8.5:1 sobre blanco) */
+  --primary-hover: #044332;
+  --primary-tint: #ecfdf5;
+
+  --accent-pink: #9f1239;      /* Carmín / Borgoña AAA (7.8:1 sobre blanco) */
+  --pink-hover: #881337;
+  --pink-tint: #fff1f2;
+
+  --secondary: #1e293b;        /* Pizarra profunda AAA (13:1 sobre blanco) */
+  --secondary-hover: #0f172a;
+  --secondary-tint: #f1f5f9;
+
+  --accent-lime: #166534;
+
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --card: #ffffff;
+
+  --border: #64748b;          /* Contraste de UI > 3:1 */
+  --border-pink: #9f1239;
+
+  --text: #0f172a;            /* Ratio 17:1 sobre blanco (AAA estricto) */
+  --text-secondary: #334155;  /* Ratio 9.5:1 sobre blanco (AAA estricto) */
+
+  --disabled: #94a3b8;
+  --danger: #991b1b;
+  --success: #065f46;
+}
+
+/* ===== MODO OSCURO (ALTO CONTRASTE WCAG AAA >= 7:1) ===== */
+[data-theme="oscuro"] {
+  --primary: #34d399;          /* Menta luminosa AAA (11:1 sobre fondo oscuro) */
+  --primary-hover: #6ee7b7;
+  --primary-tint: rgba(52, 211, 153, 0.15);
+
+  --accent-pink: #fda4af;      /* Rosa suave AAA (10:1 sobre fondo oscuro) */
+  --pink-hover: #fecdd3;
+  --pink-tint: rgba(253, 164, 175, 0.15);
+
+  --secondary: #e2e8f0;
+  --secondary-hover: #ffffff;
+  --secondary-tint: rgba(226, 232, 240, 0.12);
+
+  --accent-lime: #a7f3d0;
+
+  --bg: #090d16;              /* Pizarra negra profunda */
+  --surface: #131b2e;
+  --card: #182238;
+
+  --border: #475569;
+  --border-pink: #fda4af;
+
+  --text: #f8fafc;            /* Ratio 16.5:1 sobre fondo oscuro */
+  --text-secondary: #cbd5e1;  /* Ratio 10.8:1 sobre fondo oscuro */
+
+  --disabled: #475569;
+  --danger: #f87171;
+  --success: #34d399;
 }
 
 html, body {
@@ -197,6 +249,50 @@ a {
   cursor: not-allowed;
   transform: none !important;
   box-shadow: none !important;
+}
+
+/* =========================================================================
+   ACCESIBILIDAD WCAG AAA: ENLACE DE SALTO, FOCO Y REDUCCIÓN DE MOVIMIENTO
+   ========================================================================= */
+
+/* Enlace para saltar directo al contenido principal */
+.skip-link {
+  position: absolute;
+  top: -120px;
+  left: 1rem;
+  background: var(--text);
+  color: var(--bg);
+  padding: 0.85rem 1.4rem;
+  z-index: 100000;
+  font-weight: 800;
+  border-radius: 0 0 10px 10px;
+  transition: top 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: underline;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 4px solid var(--accent-pink) !important;
+  outline-offset: 2px;
+}
+
+/* Indicador de foco accesible visible para teclado en toda la app */
+:focus-visible {
+  outline: 3px solid var(--primary) !important;
+  outline-offset: 3px !important;
+}
+
+/* Soporte para usuarios con sensibilidad al movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* =========================================================================

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Spinner } from 'react-bootstrap';
 import { ItemList } from '../ItemList/ItemList';
 import { subscribeProducts } from '../../services/productService';
 
@@ -208,23 +209,18 @@ export const ItemListContainer = () => {
         </div>
       )}
 
-      {/* Estado de carga */}
+      {/* Estado de carga accesible con React-Bootstrap */}
       {cargando && (
-        <div style={{ textAlign: 'center', padding: '4rem 1rem' }}>
-          <div
-            style={{
-              display: 'inline-block',
-              width: '45px',
-              height: '45px',
-              border: '4px solid var(--border)',
-              borderTopColor: 'var(--primary)',
-              borderRadius: '50%',
-              animation: 'spin 0.8s linear infinite',
-              marginBottom: '1rem',
-            }}
-          />
-          <style>{`@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`}</style>
-          <p className="secondary" style={{ fontWeight: 600 }}>Sincronizando tesoros con Firebase...</p>
+        <div style={{ textAlign: 'center', padding: '4rem 1rem' }} role="status" aria-live="polite">
+          <Spinner
+            animation="border"
+            style={{ color: 'var(--primary)', width: '3rem', height: '3rem' }}
+          >
+            <span className="visually-hidden">Cargando catálogo...</span>
+          </Spinner>
+          <p className="secondary" style={{ fontWeight: 600, marginTop: '1rem' }}>
+            Sincronizando tesoros con Firebase...
+          </p>
         </div>
       )}
 
