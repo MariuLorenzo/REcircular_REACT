@@ -10,22 +10,24 @@
    ========================================================================= */
 
 .heroSection {
-  background-color: var(--surface);
-  background-image: url('/img/fondoapp.png');
-  background-size: 380px auto;
-  background-repeat: repeat;
-  background-blend-mode: overlay;
+  background-color: var(--hero-bg, var(--surface));
+  background-image:
+    linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+    url('/img/fondoapp.png');
+  background-size: cover, 360px auto;
+  background-repeat: no-repeat, repeat;
   border-radius: 24px;
   border: 3px solid var(--primary);
   padding: clamp(1.5rem, 5vw, 3.5rem) clamp(1rem, 4vw, 2.5rem);
   text-align: center;
   margin-bottom: 2.5rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   overflow-wrap: break-word;
   word-break: break-word;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .logoWrapper {

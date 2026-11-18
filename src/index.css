@@ -8,7 +8,7 @@
    1. PALETAS Y MODOS DE COLOR
    ========================================================================= */
 
-/* ===== MODO ECOLOGÍA (PALETA VINTAGE CÁLIDA ORIGINAL) ===== */
+/* ===== MODO ECOLOGÍA (PALETA VINTAGE CÁLIDA ORIGINAL, CERO CUADROS BLANCOS) ===== */
 :root, [data-theme="ecologia"] {
   /* Primario: Verde bosque vintage */
   --primary: #4ea973;
@@ -20,33 +20,44 @@
   --accent-pink: #b8532a;
   --pink-hover: #9e4422;
   --pink-tint: rgba(184, 83, 42, 0.12);
+  --btn-accent-bg: #b8532a;
+  --btn-accent-hover: #9e4422;
+  --btn-accent-text: #ffffff;
 
   /* Secundario: Camel / Dorado vintage */
   --secondary: #8b6914;
   --secondary-hover: #7a5c12;
   --secondary-tint: rgba(139, 105, 20, 0.12);
+  --btn-secondary-text: #ffffff;
 
   --accent-lime: #6b8c4a;
 
-  /* Fondos pergamino cálidos */
-  --bg: #f4dfbd;
-  --surface: #fffdf7;
-  --card: #f7fffa;
+  /* Fondos pergamino / kraft vintage cálidos (CERO cuadros en blanco puro) */
+  --bg: #eedbc2;
+  --surface: #f7e6ce;
+  --card: #faefdb;
 
   /* Bordes cálidos */
-  --border: #d4bfa0;
-  --border-pink: #e0c5a8;
+  --border: #cfb38f;
+  --border-pink: #d99a77;
 
   /* Tipografías */
   --text: #2a1a0e;
   --text-secondary: #5c3d2a;
+
+  /* Hero con perchas */
+  --hero-bg: #f4dfbd;
+  --hero-overlay: rgba(244, 223, 189, 0.82);
+
+  /* Footer específico Modo Ecología */
+  --footer-bg: #e2cbab;
 
   /* Header específico */
   --header-bg: #4ea973;
   --header-text: #fffdf7;
   --header-link-hover-color: #fef08a;
   --header-link-hover-bg: rgba(0, 0, 0, 0.12);
-  --header-link-active-bg: #fffdf7;
+  --header-link-active-bg: #faefdb;
   --header-link-active-text: #2a1a0e;
 
   /* Menú Hamburguesa Drawer */
@@ -57,7 +68,7 @@
   --drawer-link-text: #ffffff;
   --drawer-link-hover-bg: #8b3c1c;
   --drawer-link-hover-color: #fef08a;
-  --drawer-link-active-bg: #fffdf7;
+  --drawer-link-active-bg: #faefdb;
   --drawer-link-active-text: #b8532a;
 
   /* Estados */
@@ -69,18 +80,20 @@
   --font-body: 'Roboto Slab', serif;
 }
 
-/* ===== MODO CLARO (VERDE AGUA CLARO, SIN AZUL, NUNCA LETRAS NEGRAS EN HEADER) ===== */
+/* ===== MODO CLARO (VERDE AGUA FRESCO Y LIMPIO, TOTALMENTE DIFERENCIADO DE ECOLOGÍA) ===== */
 [data-theme="claro"] {
-  /* Primario: Verde bosque noble (NADA DE AZUL) */
+  /* Primario: Verde bosque noble profundo */
   --primary: #1b5e3a;
   --primary-hover: #13462b;
   --primary-tint: #eaf5ee;
   --btn-primary-text: #ffffff;
 
-  /* Acento: Terracota artesanal cálido */
+  /* Acento: Terracota artesanal fresco */
   --accent-pink: #a8431e;
   --pink-hover: #8c3516;
   --pink-tint: #fbeee8;
+  --btn-accent-bg: #a8431e;
+  --btn-accent-hover: #8c3516;
   --btn-accent-text: #ffffff;
 
   /* Secundario: Ámbar tostado */
@@ -91,18 +104,25 @@
 
   --accent-lime: #2e7d4e;
 
-  /* Fondos frescos y limpios */
-  --bg: #f4f8f5;
+  /* Fondos frescos, aireados y nítidos */
+  --bg: #f0f7f3;
   --surface: #ffffff;
   --card: #ffffff;
 
-  /* Bordes suaves */
-  --border: #b8cfc2;
+  /* Bordes suaves menta */
+  --border: #b8d9c7;
   --border-pink: #a8431e;
 
   /* Tipografías */
   --text: #142a1e;
   --text-secondary: #3b5a48;
+
+  /* Hero con perchas Modo Claro */
+  --hero-bg: #dff2e7;
+  --hero-overlay: rgba(223, 242, 231, 0.85);
+
+  /* Footer específico Modo Claro */
+  --footer-bg: #e6f4ec;
 
   /* Header específico de Modo Claro (Letras verde agua muy claro #dcfce7, hover dorado luminoso) */
   --header-bg: #1b4d36;
@@ -129,19 +149,21 @@
   --success: #1b5e3a;
 }
 
-/* ===== MODO OSCURO (SIN BLANCOS PUROS, SIN NEÓN, BOTONES OSCUROS DE LA GAMA ECOLOGÍA) ===== */
+/* ===== MODO OSCURO (SIN BLANCOS, FOOTER OSCURO, TIPOGRAFÍAS CÁLIDAS VISIBLES CERO ROJO OSCURO) ===== */
 [data-theme="oscuro"] {
-  /* Primario: Verde bosque profundo y oscuro vintage (CERO NEÓN, FONDO OSCURO) */
+  /* Primario: Verde bosque profundo y oscuro vintage */
   --primary: #225339;
   --primary-hover: #2d6b49;
   --primary-tint: rgba(34, 83, 57, 0.35);
   --btn-primary-text: #e8e4dc;
 
-  /* Acento: Terracota tostado oscuro */
-  --accent-pink: #7d3319;
-  --pink-hover: #963e1f;
-  --pink-tint: rgba(125, 51, 25, 0.3);
-  --btn-accent-text: #e8e4dc;
+  /* Acento de texto y detalles: Terracota tostada cálida luminosa (Legibilidad perfecta sobre fondo oscuro) */
+  --accent-pink: #e28266;
+  --pink-hover: #f0957a;
+  --pink-tint: rgba(226, 130, 102, 0.18);
+  --btn-accent-bg: #6e2e17; /* Fondo oscuro para botones .bg-pink */
+  --btn-accent-hover: #86381d;
+  --btn-accent-text: #fdfaf6;
 
   /* Secundario: Dorado / Bronce viejo oscuro */
   --secondary: #5e4717;
@@ -158,11 +180,18 @@
 
   /* Bordes sutiles sin brillos */
   --border: #383f45;
-  --border-pink: #7d3319;
+  --border-pink: #e28266;
 
-  /* Tipografías: Marfil cálido suave (NUNCA blanco puro #fff ni gris lavado) */
+  /* Tipografías: Marfil cálido suave para principal y beige ceniza para secundaria (CERO rojo oscuro ilegible) */
   --text: #e8e4dc;
   --text-secondary: #b5ada0;
+
+  /* Hero con perchas Modo Oscuro */
+  --hero-bg: #181c1e;
+  --hero-overlay: rgba(24, 28, 30, 0.86);
+
+  /* Footer específico Modo Oscuro (Armónico con el fondo oscuro) */
+  --footer-bg: #0f1214;
 
   /* Header específico Modo Oscuro */
   --header-bg: #181b1d;
@@ -330,14 +359,14 @@ a:hover, a:focus, a:active {
 
 /* Botón Acento (Terracota) */
 .bg-pink, button.bg-pink, a.bg-pink {
-  background-color: var(--accent-pink) !important;
-  border-color: var(--accent-pink) !important;
+  background-color: var(--btn-accent-bg, var(--accent-pink)) !important;
+  border-color: var(--btn-accent-bg, var(--accent-pink)) !important;
   color: var(--btn-accent-text, #ffffff) !important;
 }
 
 .bg-pink:hover, button.bg-pink:hover, a.bg-pink:hover {
-  background-color: var(--pink-hover) !important;
-  border-color: var(--pink-hover) !important;
+  background-color: var(--btn-accent-hover, var(--pink-hover)) !important;
+  border-color: var(--btn-accent-hover, var(--pink-hover)) !important;
   color: var(--btn-accent-text, #ffffff) !important;
 }
 
