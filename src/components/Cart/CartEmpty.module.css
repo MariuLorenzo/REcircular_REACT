@@ -3,7 +3,7 @@
 .emptyContainer {
   text-align: center;
   padding: 4.5rem 1.5rem;
-  background-color: #ffffff;
+  background-color: var(--card);
   border: 3px dashed var(--border);
   border-radius: 22px;
   max-width: 600px;
@@ -12,7 +12,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1.25rem;
-  box-shadow: 0 8px 25px rgba(0, 5, 3, 0.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
 }
 
 .emptyIcon {

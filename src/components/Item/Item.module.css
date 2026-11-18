@@ -11,7 +11,7 @@
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 25px rgba(28, 232, 154, 0.2);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
   border-color: var(--primary);
 }
 
@@ -20,7 +20,7 @@
   width: 100%;
   padding-top: 100%; /* Proporción 1:1 */
   overflow: hidden;
-  background-color: #ebf9f3;
+  background-color: var(--surface);
 }
 
 .image {
@@ -89,7 +89,7 @@
   justify-content: space-between;
   margin-top: auto;
   padding-top: 0.4rem;
-  border-top: 1.5px solid #edf8f3;
+  border-top: 1.5px solid var(--border);
 }
 
 .price {
@@ -128,7 +128,7 @@
   padding: 0.55rem 0.85rem;
   font-size: 0.85rem;
   font-weight: 700;
-  background-color: #ffffff;
+  background-color: var(--card);
   border: 2px solid var(--border);
   color: var(--text);
   border-radius: 9999px;
@@ -142,11 +142,11 @@
 .detailLink:hover {
   background-color: var(--primary);
   border-color: var(--primary);
-  color: #000503;
+  color: var(--btn-primary-text, #ffffff);
 }
 
 /* =========================================================================
-   OPTIMIZACIÓN ESTRICTA PARA PANTALLAS < 400px (Celulares pequeños)
+   OPTIMIZACIÓN ESTRICTA PARA PANTALLAS < 400px (Celulares pequeños y 272px)
    ========================================================================= */
 
 @media (max-width: 400px) {
@@ -176,5 +176,24 @@
   .detailLink {
     width: 100%;
     padding: 0.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .card {
+    border-radius: 12px;
+  }
+  .content {
+    padding: 0.65rem 0.5rem;
+  }
+  .title {
+    font-size: 1.05rem;
+  }
+  .price {
+    font-size: 1.15rem;
+  }
+  .addButton, .detailLink {
+    padding: 0.45rem 0.5rem;
+    font-size: 0.8rem;
   }
 }

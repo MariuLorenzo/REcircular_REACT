@@ -7,18 +7,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
-  background-color: #ffffff;
+  background-color: var(--card);
   border: 3px solid var(--primary);
   border-radius: 22px;
   padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 5, 3, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .imageCol {
   position: relative;
   border-radius: 18px;
   overflow: hidden;
-  background-color: #ebf9f3;
+  background-color: var(--surface);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,7 +85,7 @@
   flex-direction: column;
   gap: 0.55rem;
   padding: 1rem 1.25rem;
-  background-color: #f7fdfa;
+  background-color: var(--surface);
   border-radius: 14px;
   border: 2px solid var(--border);
 }
@@ -129,7 +129,7 @@
 }
 
 .purchaseBox {
-  background-color: #ffffff;
+  background-color: var(--surface);
   padding: 1.25rem;
   border-radius: 16px;
   border: 2px solid var(--border);
@@ -153,7 +153,7 @@
 .counter {
   display: flex;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--card);
   border: 2px solid var(--border);
   border-radius: 9999px;
   overflow: hidden;
@@ -276,6 +276,22 @@
   }
   .feedbackButtons a {
     width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 0.85rem 0.5rem;
+    border-radius: 12px;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .price {
+    font-size: 1.35rem;
+  }
+  .metaBox, .purchaseBox {
+    padding: 0.75rem 0.5rem;
   }
 }
 

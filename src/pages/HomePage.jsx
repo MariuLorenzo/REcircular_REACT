@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import styles from './HomePage.module.css';
 
 export const HomePage = () => {
   const highlights = [
@@ -21,7 +22,7 @@ export const HomePage = () => {
   ];
 
   return (
-    <div style={{ width: '100%' }}>
+    <div className={styles.pageWrapper}>
       <Helmet>
         <title>REcircular — Moda Circular y Tesoros Vintage</title>
         <meta
@@ -31,139 +32,64 @@ export const HomePage = () => {
       </Helmet>
 
       {/* Hero Banner */}
-      <section
-        style={{
-          backgroundColor: '#fff5e0',
-          backgroundImage: "url('/img/fondoapp.png')",
-          backgroundSize: '380px auto',
-          backgroundRepeat: 'repeat',
-          backgroundBlendMode: 'overlay',
-          borderRadius: '24px',
-          border: '3px solid var(--primary)',
-          padding: 'clamp(1.5rem, 5vw, 3.5rem) clamp(1rem, 4vw, 2.5rem)',
-          textAlign: 'center',
-          marginBottom: '2.5rem',
-          boxShadow: '0 8px 25px rgba(0, 5, 3, 0.06)',
-        }}
-      >
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+      <section className={styles.heroSection}>
+        <div className={styles.logoWrapper}>
           <img
             src="/img/logo-recircular.png"
             alt="Recircular"
-            style={{ maxHeight: '75px', width: 'auto' }}
+            className={styles.heroLogoImg}
           />
         </div>
 
-        <span
-          style={{
-            display: 'inline-block',
-            backgroundColor: 'var(--pink-tint)',
-            color: 'var(--accent-pink)',
-            border: '2px solid var(--accent-pink)',
-            padding: '0.35rem 1.1rem',
-            borderRadius: '9999px',
-            fontSize: '0.82rem',
-            fontWeight: 800,
-            marginBottom: '1rem',
-            letterSpacing: '1px',
-            textTransform: 'uppercase',
-          }}
-        >
+        <span className={styles.badgeTag}>
           Feria Americana & Moda Sostenible
         </span>
 
-        <h1
-          style={{
-            fontSize: 'clamp(1.6rem, 4.8vw, 3.2rem)',
-            lineHeight: 1.15,
-            marginBottom: '1rem',
-            color: 'var(--text)',
-          }}
-        >
+        <h1 className={styles.heroTitle}>
           El estilo del pasado, <br />
-          <span style={{ color: 'var(--accent-pink)' }}>el consumo del futuro</span>
+          <span className={styles.heroTitleAccent}>el consumo del futuro</span>
         </h1>
 
-        <p
-          className="secondary"
-          style={{
-            fontSize: 'clamp(0.9rem, 2.2vw, 1.1rem)',
-            maxWidth: '650px',
-            margin: '0 auto 1.8rem',
-            lineHeight: 1.55,
-          }}
-        >
+        <p className={styles.heroDesc}>
           Descubrí camperas únicas, jeans noventeros, ropa de los 80s, 
           remeras de bandas y muchos más tesoros textiles restaurados 
-          con mucho amor💞 y dedicación  <br/>
+          con mucho amor💞 y dedicación. <br />
           Promovemos la consciencia de la "moda REcircular" ♻️ para ayudar 
-          a la conservación del planeta 🌎​ eliminando la generación de más residuos 
-          de la moda.
-          Más vintage, menos fast fashion.  
+          a la conservación del planeta 🌎 eliminando la generación de más residuos 
+          de la moda. Más vintage, menos fast fashion.
         </p>
 
-        <div
-          style={{
-            display: 'flex',
-            gap: '0.85rem',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-          }}
-        >
+        <div className={styles.heroButtons}>
           <Link
             to="/productos"
-            className="btn bg-primary"
-            style={{
-              fontSize: '1rem',
-              padding: '0.8rem 2rem',
-            }}
+            className={`btn bg-primary ${styles.heroBtnPrimary}`}
           >
             Explorar Catálogo 🧥
           </Link>
           <Link
             to="/carrito"
-            className="btn bg-pink"
-            style={{
-              fontSize: '1rem',
-              padding: '0.8rem 1.8rem',
-            }}
+            className={`btn bg-pink ${styles.heroBtnPink}`}
           >
             Ver mi Carrito 🛍️
           </Link>
         </div>
       </section>
 
-      {/* Beneficios Adaptativos */}
-      <section style={{ marginBottom: '2rem' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+      {/* Beneficios Adaptativos (Resuelve responsive en 272px x 480px) */}
+      <section className={styles.benefitsSection}>
+        <h2 className={styles.benefitsTitle}>
           ¿Por qué elegir feria Recircular?
         </h2>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-            gap: '1.25rem',
-          }}
-        >
+        <div className={styles.benefitsGrid}>
           {highlights.map((item, idx) => (
-            <div
-              key={idx}
-              style={{
-                backgroundColor: '#ffffff',
-                border: '2px solid var(--border)',
-                borderRadius: '18px',
-                padding: '1.75rem 1.25rem',
-                textAlign: 'center',
-                boxShadow: '0 4px 15px rgba(0, 5, 3, 0.04)',
-              }}
-            >
-              <span style={{ fontSize: '2.5rem', display: 'block', marginBottom: '0.6rem' }}>
+            <div key={idx} className={styles.benefitCard}>
+              <span className={styles.benefitIcon}>
                 {item.icon}
               </span>
-              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.4rem', color: 'var(--accent-pink)' }}>
+              <h3 className={styles.benefitCardTitle}>
                 {item.title}
               </h3>
-              <p className="secondary" style={{ fontSize: '0.9rem', lineHeight: 1.5 }}>
+              <p className={styles.benefitCardDesc}>
                 {item.desc}
               </p>
             </div>

@@ -33,9 +33,9 @@
 }
 
 .orderCard {
-  background: #ffffff;
+  background: var(--card);
   border-radius: 14px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
   padding: 1.25rem;
   display: flex;
@@ -157,12 +157,12 @@
 
 .loadingContainer,
 .emptyContainer {
-  background: #ffffff;
+  background: var(--card);
   border-radius: 14px;
   padding: 3rem;
   text-align: center;
-  border: 1px solid #e2e8f0;
-  color: #64748b;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
 }
 
 .emptyIcon {

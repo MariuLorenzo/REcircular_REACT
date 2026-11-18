@@ -15,7 +15,14 @@
 /* 400px breakpoint: compact padding for small phones */
 @media (max-width: 400px) {
   .main {
-    padding: 1rem 0.75rem 2.5rem;
+    padding: 1rem 0.6rem 2.5rem;
+  }
+}
+
+/* 320px breakpoint: ultra-compact screens (e.g., 272px x 480px) */
+@media (max-width: 320px) {
+  .main {
+    padding: 0.75rem 0.35rem 2rem;
   }
 }
 

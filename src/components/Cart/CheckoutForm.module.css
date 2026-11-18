@@ -1,14 +1,14 @@
 /* Estilos del CheckoutForm: formulario de envío en sidebar */
 
 .summaryCard {
-  background-color: #ffffff;
+  background-color: var(--card);
   border: 2px solid var(--primary);
   border-radius: 20px;
   padding: 1.6rem;
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  box-shadow: 0 6px 20px rgba(0, 5, 3, 0.06);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 
 .summaryCard h3 {
@@ -50,7 +50,7 @@
 }
 
 .formInput {
-  background-color: #f7fdfa;
+  background-color: var(--surface);
   border: 2px solid var(--border);
   border-radius: 8px;
   padding: 0.65rem 0.85rem;

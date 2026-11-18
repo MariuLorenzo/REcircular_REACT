@@ -55,7 +55,8 @@
   --drawer-header-border: rgba(255, 255, 255, 0.25);
   --drawer-link-bg: rgba(255, 255, 255, 0.14);
   --drawer-link-text: #ffffff;
-  --drawer-link-hover-bg: rgba(255, 255, 255, 0.25);
+  --drawer-link-hover-bg: #8b3c1c;
+  --drawer-link-hover-color: #fef08a;
   --drawer-link-active-bg: #fffdf7;
   --drawer-link-active-text: #b8532a;
 
@@ -80,11 +81,13 @@
   --accent-pink: #a8431e;
   --pink-hover: #8c3516;
   --pink-tint: #fbeee8;
+  --btn-accent-text: #ffffff;
 
   /* Secundario: Ámbar tostado */
   --secondary: #7c5810;
   --secondary-hover: #65460a;
   --secondary-tint: #fcf7ec;
+  --btn-secondary-text: #ffffff;
 
   --accent-lime: #2e7d4e;
 
@@ -109,14 +112,15 @@
   --header-link-active-bg: #dcfce7;
   --header-link-active-text: #143d2b;
 
-  /* Menú Hamburguesa Drawer CLARO */
+  /* Menú Hamburguesa Drawer CLARO: Texto e interactividad de alto contraste (CERO verde sobre verde) */
   --drawer-bg: #edf7f2;
   --drawer-text: #143d2b;
   --drawer-header-border: #bbf7d0;
-  --drawer-link-bg: #dcf2e6;
+  --drawer-link-bg: rgba(27, 94, 58, 0.08);
   --drawer-link-text: #143d2b;
-  --drawer-link-hover-bg: #c7ead7;
-  --drawer-link-active-bg: #1b4d36;
+  --drawer-link-hover-bg: #1b5e3a;
+  --drawer-link-hover-color: #fef08a; /* Dorado brillante sobre verde bosque: alto contraste */
+  --drawer-link-active-bg: #1b5e3a;
   --drawer-link-active-text: #dcfce7;
 
   /* Estados */
@@ -125,25 +129,27 @@
   --success: #1b5e3a;
 }
 
-/* ===== MODO OSCURO (SIN BLANCOS PUROS, SIN NEÓN, MARFIL CÁLIDO Y CARBÓN SUAVE) ===== */
+/* ===== MODO OSCURO (SIN BLANCOS PUROS, SIN NEÓN, BOTONES OSCUROS DE LA GAMA ECOLOGÍA) ===== */
 [data-theme="oscuro"] {
-  /* Primario: Verde salvia bosque apagado (CERO NEÓN) */
-  --primary: #4a8b66;
-  --primary-hover: #3b7352;
-  --primary-tint: rgba(74, 139, 102, 0.2);
-  --btn-primary-text: #0d1e15;
+  /* Primario: Verde bosque profundo y oscuro vintage (CERO NEÓN, FONDO OSCURO) */
+  --primary: #225339;
+  --primary-hover: #2d6b49;
+  --primary-tint: rgba(34, 83, 57, 0.35);
+  --btn-primary-text: #e8e4dc;
 
-  /* Acento: Terracota mate suave vintage */
-  --accent-pink: #aa5b3d;
-  --pink-hover: #914b30;
-  --pink-tint: rgba(170, 91, 61, 0.18);
+  /* Acento: Terracota tostado oscuro */
+  --accent-pink: #7d3319;
+  --pink-hover: #963e1f;
+  --pink-tint: rgba(125, 51, 25, 0.3);
+  --btn-accent-text: #e8e4dc;
 
-  /* Secundario: Oro viejo / Bronce suave */
-  --secondary: #9c834a;
-  --secondary-hover: #836e3c;
-  --secondary-tint: rgba(156, 131, 74, 0.15);
+  /* Secundario: Dorado / Bronce viejo oscuro */
+  --secondary: #5e4717;
+  --secondary-hover: #75591d;
+  --secondary-tint: rgba(94, 71, 23, 0.3);
+  --btn-secondary-text: #e8e4dc;
 
-  --accent-lime: #739c65;
+  --accent-lime: #4f6e42;
 
   /* Fondos carbón cálido (NUNCA negro puro ni azulado) */
   --bg: #141719;
@@ -152,7 +158,7 @@
 
   /* Bordes sutiles sin brillos */
   --border: #383f45;
-  --border-pink: #aa5b3d;
+  --border-pink: #7d3319;
 
   /* Tipografías: Marfil cálido suave (NUNCA blanco puro #fff ni gris lavado) */
   --text: #e8e4dc;
@@ -161,9 +167,9 @@
   /* Header específico Modo Oscuro */
   --header-bg: #181b1d;
   --header-text: #e8e4dc;
-  --header-link-hover-color: #e5c178;
-  --header-link-hover-bg: rgba(229, 193, 120, 0.12);
-  --header-link-active-bg: #2d3237;
+  --header-link-hover-color: #fef08a;
+  --header-link-hover-bg: rgba(254, 240, 138, 0.12);
+  --header-link-active-bg: #225339;
   --header-link-active-text: #e8e4dc;
 
   /* Menú Hamburguesa Drawer OSCURO */
@@ -172,14 +178,15 @@
   --drawer-header-border: #2e343a;
   --drawer-link-bg: #262b30;
   --drawer-link-text: #e8e4dc;
-  --drawer-link-hover-bg: #32383f;
-  --drawer-link-active-bg: #3f6e52;
+  --drawer-link-hover-bg: #2d3339;
+  --drawer-link-hover-color: #fef08a;
+  --drawer-link-active-bg: #225339;
   --drawer-link-active-text: #e8e4dc;
 
   /* Estados */
   --disabled: #4e555c;
-  --danger: #c95454;
-  --success: #4a8b66;
+  --danger: #782121;
+  --success: #225339;
 }
 
 /* =========================================================================
@@ -188,7 +195,17 @@
 
 html, body {
   width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -315,26 +332,26 @@ a:hover, a:focus, a:active {
 .bg-pink, button.bg-pink, a.bg-pink {
   background-color: var(--accent-pink) !important;
   border-color: var(--accent-pink) !important;
-  color: #ffffff !important;
+  color: var(--btn-accent-text, #ffffff) !important;
 }
 
 .bg-pink:hover, button.bg-pink:hover, a.bg-pink:hover {
   background-color: var(--pink-hover) !important;
   border-color: var(--pink-hover) !important;
-  color: #ffffff !important;
+  color: var(--btn-accent-text, #ffffff) !important;
 }
 
 /* Botón Secundario (Camel / Dorado / Ámbar) */
 .bg-secondary, .btn-secondary, button.bg-secondary, a.bg-secondary {
   background-color: var(--secondary) !important;
   border-color: var(--secondary) !important;
-  color: #ffffff !important;
+  color: var(--btn-secondary-text, #ffffff) !important;
 }
 
 .bg-secondary:hover, .btn-secondary:hover, button.bg-secondary:hover, a.bg-secondary:hover {
   background-color: var(--secondary-hover) !important;
   border-color: var(--secondary-hover) !important;
-  color: #ffffff !important;
+  color: var(--btn-secondary-text, #ffffff) !important;
 }
 
 .bg-delete, .btn-danger {

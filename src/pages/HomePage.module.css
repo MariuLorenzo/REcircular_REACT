@@ -1,0 +1,236 @@
+.pageWrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* =========================================================================
+   HERO BANNER ADAPTABLE (Adaptado a temas y a pantallas estrechas)
+   ========================================================================= */
+
+.heroSection {
+  background-color: var(--surface);
+  background-image: url('/img/fondoapp.png');
+  background-size: 380px auto;
+  background-repeat: repeat;
+  background-blend-mode: overlay;
+  border-radius: 24px;
+  border: 3px solid var(--primary);
+  padding: clamp(1.5rem, 5vw, 3.5rem) clamp(1rem, 4vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.heroLogoImg {
+  max-height: 75px;
+  width: auto;
+  max-width: 100%;
+}
+
+.badgeTag {
+  display: inline-block;
+  background-color: var(--pink-tint);
+  color: var(--accent-pink);
+  border: 2px solid var(--accent-pink);
+  padding: 0.35rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.heroTitle {
+  font-size: clamp(1.4rem, 4.8vw, 3.2rem);
+  line-height: 1.18;
+  margin-bottom: 1rem;
+  color: var(--text);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.heroTitleAccent {
+  color: var(--accent-pink);
+}
+
+.heroDesc {
+  font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+  max-width: 650px;
+  margin: 0 auto 1.8rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 0.85rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.heroBtnPrimary {
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+}
+
+.heroBtnPink {
+  font-size: 1rem;
+  padding: 0.8rem 1.8rem;
+}
+
+/* =========================================================================
+   SECCIÓN BENEFICIOS ("¿Por qué elegir feria Recircular?")
+   ========================================================================= */
+
+.benefitsSection {
+  margin-bottom: 2.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.benefitsTitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.25rem, 3.5vw, 1.85rem);
+  color: var(--text);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.benefitCard {
+  background-color: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.benefitCard:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.benefitIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.benefitCardTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+  color: var(--accent-pink);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.benefitCardDesc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* =========================================================================
+   PANTALLAS ULTRA PEQUEÑAS (ej: 272px x 480px) Y MÓVILES
+   ========================================================================= */
+
+@media (max-width: 576px) {
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .heroSection {
+    border-radius: 14px;
+    border-width: 2px;
+    padding: 1.1rem 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+  .heroLogoImg {
+    max-height: 55px;
+  }
+  .badgeTag {
+    font-size: 0.72rem;
+    padding: 0.25rem 0.65rem;
+  }
+  .heroTitle {
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+  .heroDesc {
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+  }
+  .heroButtons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .heroBtnPrimary, .heroBtnPink {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.88rem;
+    white-space: normal;
+  }
+  .benefitsTitle {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+  }
+  .benefitCard {
+    border-radius: 14px;
+    padding: 1.1rem 0.75rem;
+  }
+  .benefitIcon {
+    font-size: 2rem;
+  }
+  .benefitCardTitle {
+    font-size: 1.1rem;
+  }
+  .benefitCardDesc {
+    font-size: 0.82rem;
+  }
+}

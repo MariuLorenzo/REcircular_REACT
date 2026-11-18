@@ -138,12 +138,13 @@ export const ItemListContainer = () => {
                 border: '2px solid var(--border)',
                 outline: 'none',
                 fontSize: '0.92rem',
-                backgroundColor: '#ffffff',
+                backgroundColor: 'var(--surface)',
+                color: 'var(--text)',
                 transition: 'border-color 0.2s, box-shadow 0.2s',
               }}
               onFocus={(e) => {
                 e.target.style.borderColor = 'var(--accent-pink)';
-                e.target.style.boxShadow = '0 0 0 3px rgba(232, 28, 106, 0.12)';
+                e.target.style.boxShadow = '0 0 0 3px var(--primary-tint)';
               }}
               onBlur={(e) => {
                 e.target.style.borderColor = 'var(--border)';
@@ -161,7 +162,7 @@ export const ItemListContainer = () => {
                   border: 'none',
                   fontSize: '1rem',
                   cursor: 'pointer',
-                  color: '#888',
+                  color: 'var(--text-secondary)',
                 }}
                 title="Limpiar búsqueda"
               >
@@ -181,6 +182,9 @@ export const ItemListContainer = () => {
             flexWrap: 'wrap',
             gap: '0.45rem',
             margin: '0.5rem 0 1.5rem',
+            width: '100%',
+            maxWidth: '100%',
+            boxSizing: 'border-box',
           }}
         >
           {categorias.map((cat) => {
@@ -195,11 +199,11 @@ export const ItemListContainer = () => {
                   fontSize: '0.82rem',
                   padding: '0.4rem 0.9rem',
                   width: 'auto',
-                  backgroundColor: isSelected ? 'var(--accent-pink)' : '#ffffff',
-                  color: isSelected ? '#ffffff' : 'var(--text)',
+                  backgroundColor: isSelected ? 'var(--accent-pink)' : 'var(--card)',
+                  color: isSelected ? 'var(--btn-accent-text, #ffffff)' : 'var(--text)',
                   fontWeight: isSelected ? 800 : 600,
-                  border: isSelected ? '2px solid var(--accent-pink)' : '2px solid var(--border)',
-                  boxShadow: isSelected ? '0 4px 12px rgba(232, 28, 106, 0.3)' : '0 2px 6px rgba(0,0,0,0.04)',
+                  border: isSelected ? '2px solid var(--accent-pink)' : '1.5px solid var(--border)',
+                  boxShadow: isSelected ? '0 4px 12px rgba(0, 0, 0, 0.2)' : '0 2px 6px rgba(0,0,0,0.04)',
                 }}
               >
                 {cat}
@@ -300,7 +304,8 @@ export const ItemListContainer = () => {
                   fontSize: '0.85rem',
                   opacity: paginaActual === 1 ? 0.4 : 1,
                   cursor: paginaActual === 1 ? 'not-allowed' : 'pointer',
-                  backgroundColor: '#ffffff',
+                  backgroundColor: 'var(--card)',
+                  color: 'var(--text)',
                   border: '1px solid var(--border)',
                 }}
               >
@@ -319,8 +324,8 @@ export const ItemListContainer = () => {
                       height: '38px',
                       borderRadius: '50%',
                       border: activa ? '2px solid var(--accent-pink)' : '1px solid var(--border)',
-                      backgroundColor: activa ? 'var(--accent-pink)' : '#ffffff',
-                      color: activa ? '#ffffff' : 'var(--text)',
+                      backgroundColor: activa ? 'var(--accent-pink)' : 'var(--card)',
+                      color: activa ? 'var(--btn-accent-text, #ffffff)' : 'var(--text)',
                       fontWeight: activa ? 800 : 600,
                       cursor: 'pointer',
                       transition: 'all 0.15s ease',
@@ -342,7 +347,8 @@ export const ItemListContainer = () => {
                   fontSize: '0.85rem',
                   opacity: paginaActual === totalPaginas ? 0.4 : 1,
                   cursor: paginaActual === totalPaginas ? 'not-allowed' : 'pointer',
-                  backgroundColor: '#ffffff',
+                  backgroundColor: 'var(--card)',
+                  color: 'var(--text)',
                   border: '1px solid var(--border)',
                 }}
               >

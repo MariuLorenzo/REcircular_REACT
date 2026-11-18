@@ -151,20 +151,25 @@
   padding: 0.75rem 1rem;
   border-radius: 10px;
   background-color: var(--drawer-link-bg);
-  transition: background 0.2s, color 0.2s;
+  transition: all 0.2s ease;
   display: block;
   text-decoration: none;
 }
 
 .drawerLink:hover {
-  background-color: var(--drawer-link-hover-bg);
-  color: var(--drawer-link-text);
+  background-color: var(--drawer-link-hover-bg) !important;
+  color: var(--drawer-link-hover-color) !important;
 }
 
-.drawerActive {
-  background-color: var(--drawer-link-active-bg);
-  color: var(--drawer-link-active-text);
+.drawerActive, .drawerLink.drawerActive {
+  background-color: var(--drawer-link-active-bg) !important;
+  color: var(--drawer-link-active-text) !important;
   font-weight: 800;
+}
+
+.drawerActive:hover, .drawerLink.drawerActive:hover {
+  background-color: var(--drawer-link-active-bg) !important;
+  color: var(--drawer-link-hover-color) !important;
 }
 
 .drawerFooter {
@@ -259,6 +264,21 @@
   }
   .logoImg {
     height: 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 96%;
+    gap: 0.25rem;
+  }
+  .logoImg {
+    height: 34px;
+    max-width: 130px;
+  }
+  .mobileDrawer {
+    width: 240px;
+    padding: 1rem 0.85rem;
   }
 }
 
