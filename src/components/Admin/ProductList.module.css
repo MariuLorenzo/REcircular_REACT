@@ -188,7 +188,7 @@
 .editBtn:hover {
   border-color: var(--accent-pink, #e81c6a);
   color: var(--accent-pink, #e81c6a);
-  background: #fff;
+  background: var(--surface);
 }
 
 .deleteBtn {

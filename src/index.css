@@ -14,7 +14,7 @@
   --primary: #4ea973;
   --primary-hover: #3d8a5c;
   --primary-tint: rgba(78, 169, 115, 0.15);
-  --btn-primary-text: #ffffff;
+  --btn-primary-text: #2a1a0e;
 
   /* Acento: Terracota vintage */
   --accent-pink: #b8532a;
@@ -52,17 +52,17 @@
   /* Footer específico Modo Ecología */
   --footer-bg: #e2cbab;
 
-  /* Header específico */
-  --header-bg: #4ea973;
+  /* Header específico — barra terracota igual al drawer, logo original negro */
+  --header-bg: #b8532a;
   --header-text: #fffdf7;
   --header-link-hover-color: #fef08a;
-  --header-link-hover-bg: rgba(0, 0, 0, 0.12);
-  --header-link-active-bg: #faefdb;
-  --header-link-active-text: #2a1a0e;
+  --header-link-hover-bg: rgba(0, 0, 0, 0.18);
+  --header-link-active-bg: rgba(255, 255, 255, 0.22);
+  --header-link-active-text: #fffdf7;
 
-  /* Logo adaptable */
-  --logo-filter: brightness(0) invert(1);
-  --drawer-logo-filter: brightness(0) invert(1);
+  /* Logo adaptable — colores originales negro/verde sobre fondo terracota */
+  --logo-filter: none;
+  --drawer-logo-filter: none;
   --hero-logo-filter: none;
 
   /* Menú Hamburguesa Drawer */
@@ -126,8 +126,8 @@
   --hero-bg: #d8fad4;
   --hero-overlay: rgba(216, 250, 212, 0.82);
 
-  /* Footer específico Modo Claro con el verde original #d8fad4 */
-  --footer-bg: #d8fad4;
+  /* Footer específico Modo Claro — verde ligeramente más intenso para distinguir del main */
+  --footer-bg: #b5edaf;
 
   /* Header específico de Modo Claro (Verde bosque profundo, texto BLANCO/DORADO ultra legible: CERO NEGRO) */
   --header-bg: #154c2e;

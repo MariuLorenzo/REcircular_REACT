@@ -252,6 +252,18 @@
   margin-bottom: 0.75rem;
 }
 
+/* Select dentro del drawer: usa colores del drawer, no del header */
+.mobileThemeArea .themeSelect {
+  background-color: var(--drawer-bg);
+  color: var(--drawer-text);
+  border-color: var(--drawer-header-border);
+}
+
+.mobileThemeArea .themeSelect option {
+  background-color: var(--drawer-bg);
+  color: var(--drawer-text);
+}
+
 @media (max-width: 768px) {
   .themeControls {
     display: none;
