@@ -19,14 +19,14 @@
 .formTitle {
   font-size: 1.25rem;
   font-weight: 800;
-  color: #1e293b;
+  color: var(--text);
   margin: 0;
 }
 
 .closeBtn {
   background: transparent;
   border: none;
-  color: #64748b;
+  color: var(--text-secondary);
   font-weight: 700;
   cursor: pointer;
   padding: 0.4rem 0.8rem;
@@ -35,8 +35,8 @@
 }
 
 .closeBtn:hover {
-  background: #f1f5f9;
-  color: #ef4444;
+  background: var(--surface);
+  color: var(--danger);
 }
 
 .form {
@@ -66,7 +66,7 @@
 .label {
   font-size: 0.82rem;
   font-weight: 700;
-  color: #334155;
+  color: var(--text);
 }
 
 .input,
@@ -169,14 +169,14 @@
 }
 
 .cancelButton:hover {
-  background: #f1f5f9;
-  color: #1e293b;
+  background: var(--card);
+  color: var(--text);
 }
 
 .submitButton {
   padding: 0.65rem 1.5rem;
-  background: var(--accent-pink, #e81c6a);
-  color: #ffffff;
+  background: var(--primary);
+  color: var(--btn-primary-text, #ffffff);
   border: none;
   border-radius: 8px;
   font-weight: 800;

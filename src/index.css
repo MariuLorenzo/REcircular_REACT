@@ -60,6 +60,11 @@
   --header-link-active-bg: #faefdb;
   --header-link-active-text: #2a1a0e;
 
+  /* Logo adaptable */
+  --logo-filter: brightness(0) invert(1);
+  --drawer-logo-filter: brightness(0) invert(1);
+  --hero-logo-filter: none;
+
   /* Menú Hamburguesa Drawer */
   --drawer-bg: #b8532a;
   --drawer-text: #ffffff;
@@ -80,12 +85,12 @@
   --font-body: 'Roboto Slab', serif;
 }
 
-/* ===== MODO CLARO (VERDE AGUA FRESCO Y LIMPIO, TOTALMENTE DIFERENCIADO DE ECOLOGÍA) ===== */
+/* ===== MODO CLARO (VERDE MENTA #d8fad4, NINGUNA TIPOGRAFÍA NEGRA EN NAV, LOGO ADAPTABLE) ===== */
 [data-theme="claro"] {
-  /* Primario: Verde bosque noble profundo */
-  --primary: #1b5e3a;
-  --primary-hover: #13462b;
-  --primary-tint: #eaf5ee;
+  /* Primario: Verde bosque noble profundo (alto contraste sobre #d8fad4) */
+  --primary: #196939;
+  --primary-hover: #12512c;
+  --primary-tint: rgba(25, 105, 57, 0.15);
   --btn-primary-text: #ffffff;
 
   /* Acento: Terracota artesanal fresco */
@@ -104,52 +109,57 @@
 
   --accent-lime: #2e7d4e;
 
-  /* Fondos frescos, aireados y nítidos */
-  --bg: #f0f7f3;
-  --surface: #ffffff;
+  /* Fondos frescos con la gama de verde del footer anterior: #d8fad4 */
+  --bg: #d8fad4;
+  --surface: #e9fbe6;
   --card: #ffffff;
 
   /* Bordes suaves menta */
-  --border: #b8d9c7;
+  --border: #a3dfb3;
   --border-pink: #a8431e;
 
   /* Tipografías */
-  --text: #142a1e;
-  --text-secondary: #3b5a48;
+  --text: #0e381f;
+  --text-secondary: #285437;
 
   /* Hero con perchas Modo Claro */
-  --hero-bg: #dff2e7;
-  --hero-overlay: rgba(223, 242, 231, 0.85);
+  --hero-bg: #d8fad4;
+  --hero-overlay: rgba(216, 250, 212, 0.82);
 
-  /* Footer específico Modo Claro */
-  --footer-bg: #e6f4ec;
+  /* Footer específico Modo Claro con el verde original #d8fad4 */
+  --footer-bg: #d8fad4;
 
-  /* Header específico de Modo Claro (Letras verde agua muy claro #dcfce7, hover dorado luminoso) */
-  --header-bg: #1b4d36;
-  --header-text: #dcfce7;
+  /* Header específico de Modo Claro (Verde bosque profundo, texto BLANCO/DORADO ultra legible: CERO NEGRO) */
+  --header-bg: #154c2e;
+  --header-text: #ffffff;
   --header-link-hover-color: #fef08a;
-  --header-link-hover-bg: rgba(220, 252, 231, 0.16);
-  --header-link-active-bg: #dcfce7;
-  --header-link-active-text: #143d2b;
+  --header-link-hover-bg: rgba(255, 255, 255, 0.16);
+  --header-link-active-bg: #287a4c;
+  --header-link-active-text: #ffffff;
 
-  /* Menú Hamburguesa Drawer CLARO: Texto e interactividad de alto contraste (CERO verde sobre verde) */
-  --drawer-bg: #edf7f2;
-  --drawer-text: #143d2b;
-  --drawer-header-border: #bbf7d0;
-  --drawer-link-bg: rgba(27, 94, 58, 0.08);
-  --drawer-link-text: #143d2b;
-  --drawer-link-hover-bg: #1b5e3a;
-  --drawer-link-hover-color: #fef08a; /* Dorado brillante sobre verde bosque: alto contraste */
-  --drawer-link-active-bg: #1b5e3a;
-  --drawer-link-active-text: #dcfce7;
+  /* Logo adaptable: blanco nítido en el nav para amoldarse a la barra */
+  --logo-filter: brightness(0) invert(1);
+  --drawer-logo-filter: none;
+  --hero-logo-filter: none;
+
+  /* Menú Hamburguesa Drawer CLARO: Texto en verde bosque nítido sobre #d8fad4 */
+  --drawer-bg: #d8fad4;
+  --drawer-text: #0e381f;
+  --drawer-header-border: #9eddb2;
+  --drawer-link-bg: rgba(25, 105, 57, 0.12);
+  --drawer-link-text: #0e381f;
+  --drawer-link-hover-bg: #196939;
+  --drawer-link-hover-color: #fef08a;
+  --drawer-link-active-bg: #196939;
+  --drawer-link-active-text: #ffffff;
 
   /* Estados */
   --disabled: #94a3b8;
   --danger: #991b1b;
-  --success: #1b5e3a;
+  --success: #196939;
 }
 
-/* ===== MODO OSCURO (SIN BLANCOS, FOOTER OSCURO, TIPOGRAFÍAS CÁLIDAS VISIBLES CERO ROJO OSCURO) ===== */
+/* ===== MODO OSCURO (SIN BLANCOS, FOOTER OSCURO, LOGO BLANCO LUMINOSO, CERO ROJO OSCURO) ===== */
 [data-theme="oscuro"] {
   /* Primario: Verde bosque profundo y oscuro vintage */
   --primary: #225339;
@@ -198,8 +208,13 @@
   --header-text: #e8e4dc;
   --header-link-hover-color: #fef08a;
   --header-link-hover-bg: rgba(254, 240, 138, 0.12);
-  --header-link-active-bg: #225339;
-  --header-link-active-text: #e8e4dc;
+  --header-link-active-bg: #2b3237;
+  --header-link-active-text: #fef08a;
+
+  /* Logo adaptable en Modo Oscuro: blanco marfil luminoso que destaca en el nav oscuro */
+  --logo-filter: brightness(0) invert(0.96) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  --drawer-logo-filter: brightness(0) invert(0.96);
+  --hero-logo-filter: brightness(0) invert(0.96);
 
   /* Menú Hamburguesa Drawer OSCURO */
   --drawer-bg: #1c1f22;

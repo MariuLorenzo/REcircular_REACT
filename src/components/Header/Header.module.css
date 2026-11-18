@@ -34,6 +34,8 @@
   width: auto;
   object-fit: contain;
   display: block;
+  filter: var(--logo-filter, none);
+  transition: filter 0.3s ease, transform 0.2s ease;
 }
 
 /* Botón Hamburguesa */
@@ -75,6 +77,7 @@
 .active {
   background-color: var(--header-link-active-bg);
   color: var(--header-link-active-text);
+  font-weight: 800;
 }
 
 .cartWrapper {
@@ -125,6 +128,8 @@
 .drawerLogoImg {
   height: 42px;
   width: auto;
+  filter: var(--drawer-logo-filter, var(--logo-filter, none));
+  transition: filter 0.3s ease;
 }
 
 .closeDrawerBtn {
@@ -205,12 +210,12 @@
   gap: 0.35rem;
   font-size: 0.76rem;
   font-weight: 800;
-  color: var(--text);
-  background-color: var(--surface);
-  border: 1.5px solid var(--border);
+  color: var(--header-text);
+  background-color: rgba(255, 255, 255, 0.16);
+  border: 1.5px solid rgba(255, 255, 255, 0.32);
   padding: 0.25rem 0.65rem;
   border-radius: 9999px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   white-space: nowrap;
 }
 
@@ -220,12 +225,17 @@
   font-weight: 700;
   padding: 0.3rem 0.6rem;
   border-radius: 8px;
-  border: 1.5px solid var(--border);
-  background-color: var(--surface);
-  color: var(--text);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background-color: rgba(0, 0, 0, 0.25);
+  color: var(--header-text);
   cursor: pointer;
   outline: none;
   transition: all 0.2s ease;
+}
+
+.themeSelect option {
+  background-color: var(--surface);
+  color: var(--text);
 }
 
 .themeSelect:focus-visible {

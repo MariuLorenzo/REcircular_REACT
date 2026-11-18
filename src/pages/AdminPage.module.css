@@ -17,12 +17,12 @@
 }
 
 .toastExito {
-  background: #10b981;
+  background: var(--success);
   color: #ffffff;
 }
 
 .toastError {
-  background: #ef4444;
+  background: var(--danger);
   color: #ffffff;
 }
 
@@ -38,14 +38,14 @@
 .pageTitle {
   font-size: 1.6rem;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--text);
   margin: 0 0 0.25rem;
   letter-spacing: -0.5px;
 }
 
 .pageSubtitle {
   font-size: 0.88rem;
-  color: #64748b;
+  color: var(--text-secondary);
   margin: 0;
 }
 
@@ -56,8 +56,8 @@
 }
 
 .newProductBtn {
-  background: var(--accent-pink, #e81c6a);
-  color: #ffffff;
+  background: var(--primary);
+  color: var(--btn-primary-text, #ffffff);
   border: none;
   padding: 0.75rem 1.4rem;
   border-radius: 10px;
@@ -65,18 +65,18 @@
   font-size: 0.92rem;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 4px 12px rgba(232, 28, 106, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .newProductBtn:hover {
-  opacity: 0.92;
+  background: var(--primary-hover);
   transform: translateY(-1px);
 }
 
 .seedHeaderBtn {
-  background: #ffffff;
-  border: 1.5px solid #cbd5e1;
-  color: #334155;
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  color: var(--text);
   padding: 0.75rem 1.2rem;
   border-radius: 10px;
   font-weight: 700;
@@ -86,15 +86,15 @@
 }
 
 .seedHeaderBtn:hover {
-  border-color: #0f172a;
-  background: #f8fafc;
+  border-color: var(--primary);
+  background: var(--surface);
 }
 
 .tabsRow {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 2px solid var(--border);
 }
 
 .tabBtn {
@@ -104,35 +104,35 @@
   padding: 0.75rem 1.25rem;
   font-size: 0.95rem;
   font-weight: 700;
-  color: #64748b;
+  color: var(--text-secondary);
   cursor: pointer;
   margin-bottom: -2px;
   transition: all 0.2s;
 }
 
 .tabBtn:hover {
-  color: #0f172a;
+  color: var(--text);
 }
 
 .activeTab {
-  color: var(--accent-pink, #e81c6a) !important;
-  border-bottom-color: var(--accent-pink, #e81c6a) !important;
+  color: var(--primary) !important;
+  border-bottom-color: var(--primary) !important;
 }
 
 .loadingBox {
-  background: #ffffff;
+  background: var(--card);
   border-radius: 14px;
   padding: 4rem 1rem;
   text-align: center;
-  border: 1px solid #e2e8f0;
-  color: #64748b;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
 }
 
 .spinner {
   width: 40px;
   height: 40px;
-  border: 3.5px solid #e2e8f0;
-  border-top-color: var(--accent-pink, #e81c6a);
+  border: 3.5px solid var(--border);
+  border-top-color: var(--primary);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
   margin: 0 auto 1rem;
