@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: linear-gradient(135deg, #332719 0%, #54391a 50%, #602f0f 100%);
   padding: 1.5rem;
 }
 
@@ -31,13 +31,13 @@
 .title {
   font-size: 1.4rem;
   font-weight: 800;
-  color: var(--primary, #1a1a2e);
+  color: #12512c, #1a1a2e;
   margin: 0 0 0.25rem;
 }
 
 .subtitle {
   font-size: 0.82rem;
-  color: #888;
+  color: #262626;
   margin: 0;
 }
 
@@ -56,13 +56,13 @@
 .label {
   font-size: 0.82rem;
   font-weight: 700;
-  color: #444;
+  color: #161616;
   letter-spacing: 0.03em;
 }
 
 .input {
   padding: 0.75rem 1rem;
-  border: 2px solid #e5e7eb;
+  border: 2px solid #6f6f6f;
   border-radius: 10px;
   font-size: 0.95rem;
   transition: border-color 0.2s, box-shadow 0.2s;

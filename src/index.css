@@ -109,7 +109,7 @@
 
   --accent-lime: #2e7d4e;
 
-  /* Fondos frescos con la gama de verde del footer anterior: #d8fad4 */
+  /* Fondos frescos con gama de verde */
   --bg: #d8fad4;
   --surface: #e9fbe6;
   --card: #ffffff;
@@ -135,7 +135,7 @@
   --header-link-hover-color: #fef08a;
   --header-link-hover-bg: rgba(255, 255, 255, 0.16);
   --header-link-active-bg: #287a4c;
-  --header-link-active-text: #ffffff;
+  --header-link-active-text: #e4fdd0;
 
   /* Logo adaptable: blanco nítido en el nav para amoldarse a la barra */
   --logo-filter: brightness(0) invert(1);
@@ -167,7 +167,7 @@
   --primary-tint: rgba(34, 83, 57, 0.35);
   --btn-primary-text: #e8e4dc;
 
-  /* Acento de texto y detalles: Terracota tostada cálida luminosa (Legibilidad perfecta sobre fondo oscuro) */
+  /* Acento de texto y detalles: Terracota tostada cálida luminosa Legibilidad perfecta sobre fondo oscuro */
   --accent-pink: #e28266;
   --pink-hover: #f0957a;
   --pink-tint: rgba(226, 130, 102, 0.18);
@@ -200,7 +200,7 @@
   --hero-bg: #181c1e;
   --hero-overlay: rgba(24, 28, 30, 0.86);
 
-  /* Footer específico Modo Oscuro (Armónico con el fondo oscuro) */
+  /* Footer específico Modo Oscuro */
   --footer-bg: #0f1214;
 
   /* Header específico Modo Oscuro */
@@ -211,7 +211,7 @@
   --header-link-active-bg: #2b3237;
   --header-link-active-text: #fef08a;
 
-  /* Logo adaptable en Modo Oscuro: blanco marfil luminoso que destaca en el nav oscuro */
+  /* Logo adaptable en Modo Oscuro */
   --logo-filter: brightness(0) invert(0.96) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
   --drawer-logo-filter: brightness(0) invert(0.96);
   --hero-logo-filter: brightness(0) invert(0.96);
