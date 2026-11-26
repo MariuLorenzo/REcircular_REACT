@@ -9,6 +9,7 @@ export const Item = ({ producto = {} }) => {
     precio = 0,
     stock = 1,
     imagen = '/img/logo-recircular.png',
+    posicionImagen,
     epoca,
     talle,
   } = producto;
@@ -33,6 +34,13 @@ export const Item = ({ producto = {} }) => {
           src={imagen || '/img/logo-recircular.png'}
           alt={nombre}
           className={styles.image}
+          style={
+            posicionImagen
+              ? { objectPosition: posicionImagen }
+              : nombre?.toLowerCase().includes('nirvana')
+              ? { objectPosition: 'center 22%' }
+              : undefined
+          }
           loading="lazy"
         />
         {epoca && <span className={styles.badgeEpoca}>{epoca}</span>}

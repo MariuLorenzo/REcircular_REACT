@@ -3,6 +3,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1.75rem;
   margin-top: 2rem;
+  align-items: stretch;
 }
 
 .empty {

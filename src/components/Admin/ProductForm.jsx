@@ -2,21 +2,21 @@ import { useState, useEffect } from 'react';
 import styles from './ProductForm.module.css';
 
 const CATEGORIAS_PREDEFINIDAS = [
-  'Abrigos',
-  'Pantalones',
   'Remeras',
   'Camisas',
   'Vestidos',
-  'Calzado',
+  'Pantalones',
+  'Camperas',
   'Accesorios',
-  'Varios',
+  'Abrigos',
+  'Calzados',
 ];
 
 export const ProductForm = ({ initialData, onSubmit, onCancel, loading }) => {
   const [formData, setFormData] = useState({
     nombre: '',
     precio: '',
-    categoria: 'Abrigos',
+    categoria: 'Remeras',
     talle: 'M',
     epoca: "Años 90",
     condicion: 'Excelente estado vintage',

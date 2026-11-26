@@ -6,6 +6,17 @@ import { subscribeProducts } from '../../services/productService';
 
 const ITEMS_POR_PAGINA = 8;
 
+const ORDEN_CATEGORIAS = [
+  'Remeras',
+  'Camisas',
+  'Vestidos',
+  'Pantalones',
+  'Camperas',
+  'Accesorios',
+  'Abrigos',
+  'Calzados',
+];
+
 export const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
@@ -73,10 +84,28 @@ export const ItemListContainer = () => {
     setPaginaActual(1);
   }, [categoriaSeleccionada, busqueda]);
 
-  const categorias = ['Todas', ...new Set(productos.map((p) => p.categoria).filter(Boolean))];
+  // Ordenamiento editorial: Remeras -> Camisas -> Vestidos -> Pantalones -> Camperas -> Accesorios -> Abrigos -> Calzados
+  const getCategoriaPeso = (cat) => {
+    const idx = ORDEN_CATEGORIAS.indexOf(cat);
+    return idx === -1 ? 99 : idx;
+  };
+
+  const productosOrdenados = [...productos].sort((a, b) => {
+    const pesoA = getCategoriaPeso(a.categoria);
+    const pesoB = getCategoriaPeso(b.categoria);
+    if (pesoA !== pesoB) return pesoA - pesoB;
+    return (a.nombre || '').localeCompare(b.nombre || '');
+  });
+
+  const categoriasPresentes = new Set(productos.map((p) => p.categoria).filter(Boolean));
+  const categorias = [
+    'Todas',
+    ...ORDEN_CATEGORIAS.filter((c) => categoriasPresentes.has(c)),
+    ...Array.from(categoriasPresentes).filter((c) => !ORDEN_CATEGORIAS.includes(c)),
+  ];
 
   // Filtro por categoría y por texto de búsqueda (nombre o descripción)
-  const productosFiltrados = productos.filter((p) => {
+  const productosFiltrados = productosOrdenados.filter((p) => {
     const coincideCategoria =
       categoriaSeleccionada === 'Todas' || p.categoria === categoriaSeleccionada;
     const coincideBusqueda =

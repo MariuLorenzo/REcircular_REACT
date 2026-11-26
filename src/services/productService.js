@@ -86,7 +86,7 @@ export const createProduct = async (productData, imageFile = null) => {
   const nuevoDoc = {
     nombre: productData.nombre.trim(),
     precio: Number(productData.precio) || 0,
-    categoria: productData.categoria || 'Varios',
+    categoria: productData.categoria || 'Remeras',
     talle: productData.talle || 'Único',
     epoca: productData.epoca || 'Vintage',
     condicion: productData.condicion || 'Muy bueno',
@@ -119,7 +119,7 @@ export const updateProduct = async (id, productData, imageFile = null) => {
   const datosActualizados = {
     nombre: productData.nombre.trim(),
     precio: Number(productData.precio) || 0,
-    categoria: productData.categoria || 'Varios',
+    categoria: productData.categoria || 'Remeras',
     talle: productData.talle || 'Único',
     epoca: productData.epoca || 'Vintage',
     condicion: productData.condicion || 'Muy bueno',

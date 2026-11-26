@@ -11,8 +11,9 @@ export const ItemDetail = ({ producto = {} }) => {
     precio = 0,
     stock = 1,
     imagen = '/img/logo-recircular.png',
+    posicionImagen,
     descripcion = '',
-    categoria = 'Varios',
+    categoria = 'Remeras',
     talle,
     epoca,
     condicion,
@@ -60,7 +61,18 @@ export const ItemDetail = ({ producto = {} }) => {
       <div className={styles.container}>
         {/* Columna Izquierda: Imagen de la prenda */}
         <div className={styles.imageCol}>
-          <img src={imagen} alt={nombre} className={styles.image} />
+          <img
+            src={imagen}
+            alt={nombre}
+            className={styles.image}
+            style={
+              posicionImagen
+                ? { objectPosition: posicionImagen }
+                : nombre?.toLowerCase().includes('nirvana')
+                ? { objectPosition: 'center 22%' }
+                : undefined
+            }
+          />
           {epoca && <span className={styles.tagEpoca}>✨ {epoca}</span>}
           {categoria && <span className={styles.tagCategoria}>{categoria}</span>}
         </div>
