@@ -11,6 +11,8 @@ export const DeleteConfirmModal = ({ producto, onConfirm, onCancel, loading }) =
       centered
       backdrop="static"
       keyboard={!loading}
+      dialogClassName="adminThemeScope"
+      className="adminThemeScope"
       aria-labelledby="delete-modal-title"
       aria-describedby="delete-modal-description"
     >

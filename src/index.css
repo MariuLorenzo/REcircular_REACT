@@ -234,6 +234,80 @@
 }
 
 /* =========================================================================
+   PANEL DE ADMIN Y LOGIN: SIEMPRE PALETA MODO ECOLOGÍA EN TODOS LOS TEMAS
+   ========================================================================= */
+.adminThemeScope,
+[data-theme] .adminThemeScope,
+[data-theme="claro"] .adminThemeScope,
+[data-theme="oscuro"] .adminThemeScope,
+.modal.adminThemeScope .modal-content,
+[data-theme] .modal.adminThemeScope .modal-content {
+  /* Primario: Verde bosque vintage */
+  --primary: #4ea973;
+  --primary-hover: #3d8a5c;
+  --primary-tint: rgba(78, 169, 115, 0.15);
+  --btn-primary-text: #2a1a0e;
+
+  /* Acento: Terracota vintage */
+  --accent-pink: #b8532a;
+  --pink-hover: #9e4422;
+  --pink-tint: rgba(184, 83, 42, 0.12);
+  --btn-accent-bg: #b8532a;
+  --btn-accent-hover: #9e4422;
+  --btn-accent-text: #ffffff;
+
+  /* Secundario: Camel / Dorado vintage */
+  --secondary: #8b6914;
+  --secondary-hover: #7a5c12;
+  --secondary-tint: rgba(139, 105, 20, 0.12);
+  --btn-secondary-text: #ffffff;
+
+  --accent-lime: #6b8c4a;
+
+  /* Fondos pergamino / kraft vintage cálidos (CERO blanco, CERO negro, CERO verde menta claro) */
+  --bg: #eedbc2;
+  --surface: #f7e6ce;
+  --card: #faefdb;
+
+  /* Bordes cálidos */
+  --border: #cfb38f;
+  --border-pink: #d99a77;
+
+  /* Tipografías sepia */
+  --text: #2a1a0e;
+  --text-secondary: #5c3d2a;
+
+  /* Header específico */
+  --header-bg: #b8532a;
+  --header-text: #fffdf7;
+
+  /* Logo */
+  --logo-filter: none;
+  --drawer-logo-filter: none;
+  --hero-logo-filter: none;
+
+  /* Estados */
+  --disabled: #c4a882;
+  --danger: #b8532a;
+  --success: #4a7c5e;
+}
+
+.modal.adminThemeScope .modal-content,
+[data-theme] .modal.adminThemeScope .modal-content {
+  background-color: var(--card) !important;
+  color: var(--text) !important;
+  border: 2px solid var(--border) !important;
+  border-radius: 16px !important;
+}
+
+.modal.adminThemeScope .modal-header,
+.modal.adminThemeScope .modal-footer,
+[data-theme] .modal.adminThemeScope .modal-header,
+[data-theme] .modal.adminThemeScope .modal-footer {
+  border-color: var(--border) !important;
+}
+
+/* =========================================================================
    2. REGLAS BASE Y RESET DE BOOTSTRAP
    ========================================================================= */
 

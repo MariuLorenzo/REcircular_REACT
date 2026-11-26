@@ -14,13 +14,14 @@
   margin: 0;
   font-size: 1.25rem;
   font-weight: 800;
-  color: #1e293b;
+  color: var(--text);
 }
 
 .syncBadge {
   font-size: 0.75rem;
-  color: #16a34a;
-  background: #dcfce7;
+  color: var(--success);
+  background: var(--primary-tint);
+  border: 1px solid var(--border);
   padding: 0.25rem 0.65rem;
   border-radius: 20px;
   font-weight: 700;

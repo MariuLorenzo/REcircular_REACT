@@ -31,7 +31,7 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className={styles.pageWrapper}>
+    <div className={`${styles.pageWrapper} adminThemeScope`} data-theme="ecologia">
       <Helmet>
         <title>Ingreso Administrador — REcircular</title>
         <meta name="robots" content="noindex, nofollow" />

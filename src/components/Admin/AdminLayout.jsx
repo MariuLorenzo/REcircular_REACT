@@ -17,7 +17,7 @@ export const AdminLayout = () => {
   };
 
   return (
-    <div className={styles.adminContainer}>
+    <div className={`${styles.adminContainer} adminThemeScope`} data-theme="ecologia">
       {/* Sidebar Lateral */}
       <aside className={styles.sidebar}>
         <div className={styles.brand}>

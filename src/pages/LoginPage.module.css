@@ -3,17 +3,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #332719 0%, #54391a 50%, #602f0f 100%);
+  background: radial-gradient(circle at center, var(--surface) 0%, var(--bg) 100%);
   padding: 1.5rem;
+  color: var(--text);
+  font-family: var(--font-body);
 }
 
 .card {
-  background: #d8fad4;
+  background: var(--card);
+  border: 2px solid var(--border);
   border-radius: 20px;
   padding: 2.5rem 2rem;
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 15px 35px rgba(42, 26, 14, 0.12);
 }
 
 .logoArea {
@@ -29,15 +32,16 @@
 }
 
 .title {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: #12512c, #1a1a2e;
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: var(--text);
   margin: 0 0 0.25rem;
 }
 
 .subtitle {
-  font-size: 0.82rem;
-  color: #262626;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
   margin: 0;
 }
 
@@ -54,15 +58,17 @@
 }
 
 .label {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #161616;
-  letter-spacing: 0.03em;
+  color: var(--text);
+  letter-spacing: 0.02em;
 }
 
 .input {
   padding: 0.75rem 1rem;
-  border: 2px solid #6f6f6f;
+  background: var(--surface);
+  color: var(--text);
+  border: 1.5px solid var(--border);
   border-radius: 10px;
   font-size: 0.95rem;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -72,24 +78,24 @@
 }
 
 .input:focus {
-  border-color: var(--accent-pink, #e81c6a);
-  box-shadow: 0 0 0 3px rgba(232, 28, 106, 0.12);
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 0 3px var(--pink-tint);
 }
 
 .error {
-  font-size: 0.82rem;
-  color: #dc2626;
-  background: #fef2f2;
-  border: 1px solid #fecaca;
+  font-size: 0.85rem;
+  color: #ffffff;
+  background: var(--danger);
   border-radius: 8px;
   padding: 0.6rem 0.9rem;
   margin: 0;
+  font-weight: 600;
 }
 
 .submitBtn {
   padding: 0.85rem;
-  background: var(--primary, #1a1a2e);
-  color: #fff;
+  background: var(--primary);
+  color: var(--btn-primary-text, #ffffff);
   border: none;
   border-radius: 10px;
   font-size: 0.95rem;
@@ -100,7 +106,7 @@
 }
 
 .submitBtn:hover:not(:disabled) {
-  background: var(--accent-pink, #e81c6a);
+  background: var(--primary-hover);
 }
 
 .submitBtn:active:not(:disabled) {
@@ -115,15 +121,16 @@
 .backLink {
   text-align: center;
   margin-top: 1.25rem;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
 }
 
 .backLink a {
-  color: #888;
+  color: var(--text-secondary);
   text-decoration: none;
+  font-weight: 600;
   transition: color 0.2s;
 }
 
 .backLink a:hover {
-  color: var(--accent-pink, #e81c6a);
+  color: var(--accent-pink);
 }
