@@ -75,7 +75,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* Beneficios Adaptativos (Resuelve responsive en 272px x 480px) */}
+      {/* Beneficios Adaptativos (responsive) */}
       <section className={styles.benefitsSection}>
         <h2 className={styles.benefitsTitle}>
           ¿Por qué elegir feria Recircular?

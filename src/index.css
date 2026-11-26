@@ -8,7 +8,7 @@
    1. PALETAS Y MODOS DE COLOR
    ========================================================================= */
 
-/* ===== MODO ECOLOGÍA (PALETA VINTAGE CÁLIDA ORIGINAL, CERO CUADROS BLANCOS) ===== */
+/* ===== MODO ECOLOGÍA (PALETA VINTAGE CÁLIDA ORIGINAL) ===== */
 :root, [data-theme="ecologia"] {
   /* Primario: Verde bosque vintage */
   --primary: #4ea973;
@@ -32,7 +32,7 @@
 
   --accent-lime: #6b8c4a;
 
-  /* Fondos pergamino / kraft vintage cálidos (CERO cuadros en blanco puro) */
+  /* Fondos pergamino / kraft vintage cálidos */
   --bg: #eedbc2;
   --surface: #f7e6ce;
   --card: #faefdb;
@@ -52,7 +52,7 @@
   /* Footer específico Modo Ecología */
   --footer-bg: #e2cbab;
 
-  /* Header específico — barra terracota igual al drawer, logo original negro */
+  /* Header específico — barra terracota - logo original negro */
   --header-bg: #b8532a;
   --header-text: #fffdf7;
   --header-link-hover-color: #fef08a;
@@ -85,13 +85,13 @@
   --font-body: 'Roboto Slab', serif;
 }
 
-/* ===== MODO CLARO (VERDE MENTA #d8fad4, NINGUNA TIPOGRAFÍA NEGRA EN NAV, LOGO ADAPTABLE) ===== */
+/* ===== MODO CLARO (VERDE MENTA #d8fad4) ===== */
 [data-theme="claro"] {
   /* Primario: Verde bosque noble profundo (alto contraste sobre #d8fad4) */
   --primary: #196939;
   --primary-hover: #12512c;
   --primary-tint: rgba(25, 105, 57, 0.15);
-  --btn-primary-text: #ffffff;
+  --btn-primary-text: #f8f7de;
 
   /* Acento: Terracota artesanal fresco */
   --accent-pink: #a8431e;
@@ -119,19 +119,19 @@
   --border-pink: #a8431e;
 
   /* Tipografías */
-  --text: #0e381f;
+  --text: #d8fad4 /* #0e381f*/;
   --text-secondary: #285437;
 
   /* Hero con perchas Modo Claro */
   --hero-bg: #d8fad4;
   --hero-overlay: rgba(216, 250, 212, 0.82);
 
-  /* Footer específico Modo Claro — verde ligeramente más intenso para distinguir del main */
+  /* Footer específico Modo Claro — verde */
   --footer-bg: #b5edaf;
 
-  /* Header específico de Modo Claro (Verde bosque profundo, texto BLANCO/DORADO ultra legible: CERO NEGRO) */
+  /* Header específico de Modo Claro - Verde bosque profundo) */
   --header-bg: #154c2e;
-  --header-text: #ffffff;
+  --header-text: #d8fad4;
   --header-link-hover-color: #fef08a;
   --header-link-hover-bg: rgba(255, 255, 255, 0.16);
   --header-link-active-bg: #287a4c;
@@ -151,7 +151,7 @@
   --drawer-link-hover-bg: #196939;
   --drawer-link-hover-color: #fef08a;
   --drawer-link-active-bg: #196939;
-  --drawer-link-active-text: #ffffff;
+  --drawer-link-active-text: #cdf8c9;
 
   /* Estados */
   --disabled: #94a3b8;
@@ -159,7 +159,7 @@
   --success: #196939;
 }
 
-/* ===== MODO OSCURO (SIN BLANCOS, FOOTER OSCURO, LOGO BLANCO LUMINOSO, CERO ROJO OSCURO) ===== */
+/* ===== MODO OSCURO ===== */
 [data-theme="oscuro"] {
   /* Primario: Verde bosque profundo y oscuro vintage */
   --primary: #225339;
@@ -183,7 +183,7 @@
 
   --accent-lime: #4f6e42;
 
-  /* Fondos carbón cálido (NUNCA negro puro ni azulado) */
+  /* Fondos carbón cálido */
   --bg: #141719;
   --surface: #1d2124;
   --card: #23282c;
@@ -192,7 +192,7 @@
   --border: #383f45;
   --border-pink: #e28266;
 
-  /* Tipografías: Marfil cálido suave para principal y beige ceniza para secundaria (CERO rojo oscuro ilegible) */
+  /* Tipografías: Marfil cálido suave para principal y beige ceniza para secundaria */
   --text: #e8e4dc;
   --text-secondary: #b5ada0;
 
@@ -234,7 +234,7 @@
 }
 
 /* =========================================================================
-   2. REGLAS BASE Y RESET DE BOOTSTRAP (SIN AZULES NO DESEADOS)
+   2. REGLAS BASE Y RESET DE BOOTSTRAP
    ========================================================================= */
 
 html, body {
@@ -306,7 +306,7 @@ ul {
   list-style: none;
 }
 
-/* Anular absolutamente cualquier azul por defecto de Bootstrap en enlaces */
+/* Anular por defecto de Bootstrap en enlaces */
 a {
   color: inherit !important;
   text-decoration: none !important;
@@ -334,7 +334,7 @@ a:hover, a:focus, a:active {
 }
 
 /* =========================================================================
-   3. BOTONES Y ESTILOS DE ACCIÓN (CON LA PALETA DE LA TIENDA, CERO AZUL)
+   3. BOTONES Y ESTILOS DE ACCIÓN (CON LA PALETA DE LA TIENDA)
    ========================================================================= */
 
 .btn, button.btn, a.btn {

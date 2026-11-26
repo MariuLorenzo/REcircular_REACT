@@ -252,7 +252,7 @@
   margin-bottom: 0.75rem;
 }
 
-/* Select dentro del drawer: usa colores del drawer, no del header */
+/* Select dentro del drawer */
 .mobileThemeArea .themeSelect {
   background-color: var(--drawer-bg);
   color: var(--drawer-text);

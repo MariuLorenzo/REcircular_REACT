@@ -148,7 +148,6 @@
 
 /* =========================================================================
    OPTIMIZACIÓN ESTRICTA PARA PANTALLAS < 400px (Celulares pequeños y 272px)
-   Todas las tarjetas quedan idénticas, niveladas y simétricas
    ========================================================================= */
 
 @media (max-width: 400px) {
@@ -204,7 +203,7 @@
     height: 100%;
   }
   .imageWrapper {
-    padding-top: 65%; /* imagen más achatada: ocupa menos altura vertical */
+    padding-top: 65%; 
   }
   .content {
     padding: 0.65rem 0.5rem;
