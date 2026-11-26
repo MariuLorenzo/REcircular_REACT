@@ -70,3 +70,27 @@
     border-radius: 16px;
   }
 }
+
+@media (max-width: 300px) {
+  .summaryCard {
+    padding: 0.85rem 0.7rem;
+    border-radius: 12px;
+    gap: 0.6rem;
+  }
+  .summaryCard h3 {
+    font-size: 1.15rem;
+  }
+  .summaryRow {
+    font-size: 0.82rem;
+  }
+  .totalRow {
+    font-size: 1.1rem;
+  }
+  .checkoutForm h4 {
+    font-size: 1rem;
+  }
+  .formInput {
+    font-size: 0.82rem;
+    padding: 0.5rem 0.65rem;
+  }
+}

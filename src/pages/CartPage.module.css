@@ -57,6 +57,23 @@
   }
 }
 
+/* Ultra-compacto 272px */
+@media (max-width: 300px) {
+  .container {
+    gap: 0.9rem;
+    padding: 0 0.1rem;
+  }
+  .headerRow h1 {
+    font-size: 1.3rem;
+  }
+  .headerRow {
+    gap: 0.5rem;
+  }
+  .itemsList {
+    gap: 0.75rem;
+  }
+}
+
 @media (min-width: 401px) and (max-width: 900px) {
   .contentGrid {
     grid-template-columns: 1fr;
