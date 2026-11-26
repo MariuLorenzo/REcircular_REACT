@@ -214,6 +214,7 @@ export const ItemListContainer = () => {
             width: '100%',
             maxWidth: '100%',
             boxSizing: 'border-box',
+            padding: '0 0.25rem',
           }}
         >
           {categorias.map((cat) => {
@@ -225,14 +226,15 @@ export const ItemListContainer = () => {
                 onClick={() => setCategoriaSeleccionada(cat)}
                 className="btn"
                 style={{
-                  fontSize: '0.82rem',
-                  padding: '0.4rem 0.9rem',
+                  fontSize: 'clamp(0.72rem, 2.5vw, 0.82rem)',
+                  padding: 'clamp(0.3rem, 1vw, 0.4rem) clamp(0.55rem, 2vw, 0.9rem)',
                   width: 'auto',
                   backgroundColor: isSelected ? 'var(--accent-pink)' : 'var(--card)',
                   color: isSelected ? 'var(--btn-accent-text, #ffffff)' : 'var(--text)',
                   fontWeight: isSelected ? 800 : 600,
                   border: isSelected ? '2px solid var(--accent-pink)' : '1.5px solid var(--border)',
                   boxShadow: isSelected ? '0 4px 12px rgba(0, 0, 0, 0.2)' : '0 2px 6px rgba(0,0,0,0.04)',
+                  whiteSpace: 'nowrap',
                 }}
               >
                 {cat}

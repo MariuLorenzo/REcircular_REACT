@@ -203,6 +203,9 @@
     border-radius: 12px;
     height: 100%;
   }
+  .imageWrapper {
+    padding-top: 65%; /* imagen más achatada: ocupa menos altura vertical */
+  }
   .content {
     padding: 0.65rem 0.5rem;
     gap: 0.4rem;
@@ -216,12 +219,14 @@
     padding-top: 0.35rem;
     gap: 0.2rem;
     min-height: 2rem;
+    flex-wrap: wrap;
   }
   .price {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
   .stock {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
+    text-align: right;
   }
   .actions {
     gap: 0.35rem;
@@ -235,5 +240,17 @@
     padding: 0.45rem;
     font-size: 0.78rem;
     min-height: 2rem;
+  }
+  .badgeEpoca {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .badgeTalle {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.4rem;
+    max-width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
